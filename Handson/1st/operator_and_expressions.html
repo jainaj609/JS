@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators & Expressions</title>
+    <style>
+        .parent{
+            width: 80vw;
+            margin: auto;
+        }
+        h1{
+            margin: 1em auto;
+            font-size: 3em;
+        }
+        h1,
+        h3 {
+            color: darkslateblue;
+        }
+
+        h3+div {
+            width: inherit;
+            height: max-content;
+            background-color: rgba(71, 61, 139, 0.493);
+            border: 1px solid darkslateblue;
+        }
+
+        pre {
+            box-sizing: border-box;
+            width: 100%;
+            border-left: 5px solid darkslateblue;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: white;
+            line-height: 2.5em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+    <h1>Operators & Expressions</h1>
+    <h3>Question 1: Add two Numbers?</h3>
+    <div>
+        <h3>Ans.</h3>
+        <pre>
+            const AddTwoNumbers = (a,b) => {
+                return a+b;
+            };        
+        </pre>
+    </div>
+    <h3>Question 2: Find if the conditions are obeyed or not?</h3>
+    <div>
+        <h3>Ans.</h3>
+        <pre>
+            const Is_Valid = (a,b) => {
+                return a<10 && a>b;
+            };        
+        </pre>
+    </div>
+    <h3>Question 3: Check the conditons?</h3>
+    <div>
+        <h3>Ans.</h3>
+        <pre>
+            const Check = (A, B) => 
+            {
+            return A%10===0 || B%10==0
+            };        
+        </pre>
+    </div>
+    <h3>Question 4: Find the first digit of a 4 digit number?</h3>
+    <div>
+        <h3>Ans.</h3>
+        <pre>
+            const First_Digit = (n) => {
+                return Math.trunc(n/1000);
+            };        
+        </pre>
+    </div>
+    <h3>Question 5: Find the last digit of a 4 digit number?</h3>
+    <div>
+        <h3>Ans.</h3>
+        <pre>
+            const Last_Digit = (n) => {
+                return n%10;
+            };    
+        </pre>
+    </div>
+    <h3>Question 6: Find the remainder?</h3>
+    <div>
+        <h3>Ans.</h3>
+        <pre>
+            const Find_the_remainder = (a,b) => {
+                return b%a;
+            };               
+        </pre>
+    </div>
+    <h3>Question 7: Multipy two Numbers?</h3>
+    <div>
+        <h3>Ans.</h3>
+        <pre>
+            const Find_the_remainder = (a,b) => {
+                return a*b;
+            };               
+        </pre>
+    </div>
+    <h3>Question 8: Marks Calculator?</h3>
+    <div>
+        <h3>Ans.</h3>
+        <pre>
+            const Sum = (A, B, C) => 
+            {
+                return A+B+C;
+            };
+
+            const Average = (A, B, C) => 
+            {
+                return ((A+B+C)/3);
+            };              
+        </pre>
+    </div>
+</div>
+</body>
+
+</html>

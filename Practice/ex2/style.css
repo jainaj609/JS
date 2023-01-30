@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    /* padding: 0; */
+}
+body{
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+select{
+    appearance:none;
+    outline: none;
+    border: 0!important;
+    background-color: transparent;
+    color: #3D087BDE;
+    padding: 10px;
+
+}
+select::-ms-expand{
+    display: none;
+}
+.select{
+    height: 40px;
+    width: 250px;
+    border-radius: 4px;
+    background-color: #EDEDED;
+    cursor: pointer;
+    padding: 0.25em 0.5em;
+    font-size: 1.25rem;
+    line-height: 1.1;
+    
+}

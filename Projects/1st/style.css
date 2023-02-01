@@ -87,10 +87,10 @@ body {
     position: absolute;
     top: 495px;
     left: 125px;
-    width: 381px;
+    width: 480px;
     height: 34px;
     text-align: left;
-    font: 25px/40px "Bauhaus Hv BT";
+    font: 22px/40px "Bauhaus Hv BT";
     color: #FFFFFF;
 
 }
@@ -276,7 +276,7 @@ body {
     box-sizing: border-box;
     padding: 35px;
     text-align: center;
-    font: 25px/40px Bauhaus Hv BT;
+    font: 26px/40px Bauhaus Hv BT;
     color: #8E53F0;
 }
 
@@ -305,7 +305,6 @@ body {
 
 .select-box .options-container {
     background: #FFFFFF;
-    color: #3D087BDE;
     box-shadow: 0px 0px 20px -20px #67676729,
         25px 0px 20px -20px #67676729,
         0px 25px 20px -20px #67676729,

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Iteration Statements</title>
+    <style>
+        .parent {
+            width: 80vw;
+            margin: auto;
+            font-family: 'Roboto', sans-serif;
+            color: rgb(165, 49, 49);
+        }
+
+        h1 {
+            margin: 1em auto;
+            font-size: 3em;
+        }
+
+        h1,
+        h3 {
+            color: darkslateblue;
+        }
+
+        h3+div {
+            width: inherit;
+            height: max-content;
+            background-color: rgba(71, 61, 139, 0.493);
+            border: 1px solid darkslateblue;
+        }
+
+        pre {
+            box-sizing: border-box;
+            width: 100%;
+            border-left: 5px solid darkslateblue;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: white;
+            line-height: 2.5em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <h1>Iteration Statements</h1>
+        <h3>Question 1: Find the number of digits?</h3>
+        <div>
+            <h3>Ans.</h3>
+            <pre>
+            const Find_Digits = (N) => 
+            {
+                 let count=0;
+                 while(N!=0){
+                   count++;
+                   N = Math.floor(N/10);
+                 }
+                 return count;
+            };         
+        </pre>
+        </div>
+        <h3>Question 2: Find the Fives?</h3>
+        <div>
+            <h3>Ans.</h3>
+            <pre>
+            const Find_Five = (N) => {
+                let count = 0, check = 0;
+                while (N != 0) {
+                    check = N % 10;
+                    if (check === 5) {
+                        count++;
+                    }
+                    N = Math.floor(N / 10);
+                }
+                return count;
+            };     
+        </pre>
+        </div>
+        <h3>Question 3: Find Sum?</h3>
+        <div>
+            <h3>Ans.</h3>
+            <pre>
+            const findSum = (n) => {
+                let it, ans=0;
+                for(it=1; it<=n; it++){
+                   if(it%2===0){
+                     ans+=it;
+                   }
+                 }
+                 return ans;  
+            };         
+        </pre>
+        </div>
+        <h3>Question 4: Find the sum of the digits of a given number?</h3>
+        <div>
+            <h3>Ans.</h3>
+            <pre>
+            const Number_Sum = (N) => 
+            {
+                let total=0 ;
+                while(N!=0){
+                  let number=0;
+                  number = N%10;
+                  total = total+number;
+                  N = Math.floor(N/10);
+                }
+                return total;
+            };         
+        </pre>
+        </div>
+        <h3>Question 5: Print the Odds?</h3>
+        <div>
+            <h3>Ans.</h3>
+            <pre>
+            const Print_Odd = (N) => 
+            {
+                let i=0;
+                console.log(2);
+                for(i=3; i<=N; i=i+2){
+                     console.log(i);
+                 }
+            };    
+        </pre>
+        </div>
+        <h3>Question 6: Print the Pattern?</h3>
+        <div>
+            <h3>Ans.</h3>
+            <pre>
+                const Print_pattern = (N) => 
+                {
+                    for(let i=1; i<=N; i++){
+                        let s="";
+                        for(let j=1; j<=i; j++){
+                            s=s+"*";   
+                        }
+                    console.log(s);
+                    }
+                };               
+        </pre>
+        </div>
+        <h3>Question 7: Check whether a Number is a prime or not?</h3>
+        <div>
+            <h3>Ans.</h3>
+            <pre>
+            const Prime_Check = (N) => {
+                let s = "";
+                if (N == 1) {
+                    s = "NO";
+                }
+                for (let i = 2; i < N; i++) {
+                    if (N % i == 0) {
+                        s = "NO";
+                    }
+                }
+                if (s == "NO") {
+                    return "NO";
+                } else {
+                    return "YES";
+                }
+            };                  
+        </pre>
+        </div>
+        <h3>Question 8: Print Numbers?</h3>
+        <div>
+            <h3>Ans.</h3>
+            <pre>
+                const printNumbers = (n) => {
+                    for(let i=1; i<=n; i++){
+                      console.log(i);
+                    }
+                };            
+        </pre>
+        </div>
+        <h3>Question 9: Print the Table?</h3>
+        <div>
+            <h3>Ans.</h3>
+            <pre>
+                const Print_Table = (N) => {
+                    for (i = 1; i <= 10; i++) {
+                        console.log(N + " * " + i + " = " + N * i);
+                    }
+                };
+            </pre>
+        </div>
+    </div>
+</body>
+
+</html>

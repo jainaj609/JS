@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <h2>Number is prime or not</h2>
+
+    <script>
+        document.write("hi<br>")
+
+        const Prime_Check = (N) => {
+            let s = "";
+
+            if (N == 1) {
+                s = "NO";
+            }
+            for (let i = 2; i < N; i++) {
+                if (N % i == 0) {
+                    s = "NO";
+                }
+            }
+            if (s == "NO") {
+                document.write(s);
+                console.log(s);
+            } else {
+                document.write("YES");
+                console.log("YES");
+            }
+        };
+        let a = 7;
+
+        document.write("Number:" + a + "<br>");
+
+        Prime_Check(a);
+
+        
+    </script>
+</body>
+
+</html>

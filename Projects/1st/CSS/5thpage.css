@@ -1,0 +1,114 @@
+body {
+    height: 2194px;
+}
+
+.clock_logo {
+    top: 112px;
+    left: 108px;
+    width: 204px;
+    height: 77px;
+}
+
+.gray_text {
+    position: absolute;
+    top: 80px;
+    left: 109px;
+    width: 32px;
+    height: 18px;
+    font: 100 14px/22px 'Manrope', sans-serif;
+    color: #A983D6;
+}
+
+.icons-box {
+    position: absolute;
+    top: 259px;
+    left: 108px;
+    width: 359px;
+    height: 111px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+}
+
+.icons-box>span {
+    position: absolute;
+    top: 20px;
+    left: 31px;
+    width: 35px;
+    height: 18px;
+    z-index: 2;
+    text-transform: capitalize;
+}
+
+.icons {
+    position: absolute;
+    top: 49px;
+    left: 25px;
+    width: 266px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.digital_clock {
+    top: 446px;
+    left: 108px;
+}
+
+.digital_clock1 {
+    top: 457px;
+    left: 152px;
+}
+
+.digital_clock2 {
+    top: 460px;
+    left: 171px;
+}
+
+.select-box .options-container {
+    top: 654px;
+    left: 108px;
+    opacity: 1;
+    overflow-y: scroll;
+    display: block;
+}
+
+.select-box .new_position {
+    top: 889px;
+    left: 108px;
+    height: 236px;
+   
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    pointer-events: none;
+}
+
+.new_position .option:first-child {
+    top: 889px;
+    left: 108px;
+}
+
+.select-box .new_position .option {
+    background: #DDF5FF;
+    color: #00A5ECDE;
+}
+
+.img1{
+    top: 62px;
+}
+
+.img2{
+    top: 446px;
+    background-image: url('../Images/Component\ 31\ –\ 1.svg');
+}
+
+.img3{
+    top: 830px;
+    background-image: url('../Images/lunch_image/lunch_image.png');
+}
+
+.img4{
+    top: 1214px;
+    background-image: url('../Images/Component\ 32\ –\ 1/Component 32 – 1.png');
+
+}

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array of Objects</title>
+    <style>
+        .parent{
+            width: 80vw;
+            margin: auto;
+        }
+        h1{
+            margin: 1em auto;
+            font-size: 3em;
+        }
+        h1,
+        h3 {
+            color: darkslateblue;
+        }
+
+        h3+div {
+            width: inherit;
+            height: max-content;
+            background-color: rgba(71, 61, 139, 0.493);
+            border: 1px solid darkslateblue;
+        }
+
+        pre {
+            box-sizing: border-box;
+            width: 100%;
+            border-left: 5px solid darkslateblue;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: white;
+            line-height: 2.5em;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <h1>Array of Objects</h1>
+        <!-- <h3>Question 1: Add two Numbers?</h3> -->
+        <div>
+            <h3>Given Data</h3>
+            <pre>
+                let studentRecords = [{ name: 'John', id: 123, marks: 98 },
+                                    { name: 'Baba', id: 101, marks: 23 },
+                                    { name: 'yaga', id: 200, marks: 45 },
+                                    { name: 'Wick', id: 115, marks: 75 }];
+            </pre>
+        </div>
+        <h3>"Question 1 : We are interested in retrieving only the name of the students and all the names should be in caps. <br>
+
+            ['JOHN', 'BABA', 'YAGA', 'WICK']
+            "?</h3>
+        <div>
+            <h3>Ans.</h3>
+            <pre>
+                let result = [];
+                for (i = 0; i < studentRecords.length; i++) {
+                    result.push(studentRecords[i].name.toUpperCase());
+                 }
+                console.log(result);
+            </pre>
+        </div>
+        <h3>"Question 2: Suppose we have the same dataset as above but this time we want to get the details of students who scored more than 50 marks. <br>
+
+            [{name: 'John', id: 123, marks : 98 },{name: 'Wick', id: 115, marks : 75 }]"</h3>
+        <div>
+            <h3>Ans.</h3>
+            <pre>
+                let result = [];
+                for (i = 0; i < studentRecords.length; i++) {
+                    if (studentRecords[i].marks > 50) {
+                        result.push(studentRecords[i]);
+                    }
+                }
+                console.log(result);
+            </pre>
+        </div>
+
+        <h3>Question 3: Retrieve the details of students who scored more than 50 marks and have id greater than 120.</h3>
+        <div>
+            <h3>Ans.</h3>
+            <pre>
+                for (i = 0; i < studentRecords.length; i++) {
+                    if (studentRecords[i].marks > 50 && studentRecords[i].id > 120) {
+                        result.push(studentRecords[i]);
+                    }
+                }
+                console.log(result);
+            </pre>
+        </div>
+
+        <h3>Question 4: Consider the same scenario we have discussed above, but this time we would like to know the sum total of the marks of the students.</h3>
+        <div>
+            <h3>Ans.</h3>
+            <pre>
+                for (i = 0; i < studentRecords.length; i++) {
+                    if (studentRecords[i].marks > 50 && studentRecords[i].id > 120) {
+                        result.push(studentRecords[i]);
+                    }
+                }
+                console.log(result);
+            </pre>
+        </div>
+        <h3>Question 5: This time we want to get only the names of the students who scored more than 50 marks from the same dataset used above.</h3>
+        <div>
+            <h3>Ans.</h3>
+            <pre>
+                let sum=0;
+                for (i = 0; i < studentRecords.length; i++) {
+                    if (studentRecords[i].marks > 50) {
+                        sum+=studentRecords[i].marks;
+                    }
+                }
+                console.log(result);
+            </pre>
+        </div>
+        <h3> Question 6: This time we are required to print the sum of marks of the students with id > 120.</h3>
+        <div>
+            <h3>Ans.</h3>
+            <pre>
+                let sum=0;
+                 for (i = 0; i < studentRecords.length; i++) {
+                    if (studentRecords[i].id > 120) {
+                        sum+=studentRecords[i].marks;
+                     }
+                }
+                console.log(result);
+            </pre>
+        </div>
+        <h3>Question 7: This time we are required to print the total marks of the students with marks greater than 50 after a grace of 15 marks has been added to those students who scored less than 50.</h3>
+        <div>
+            <h3>Ans.</h3>
+            <pre>
+                let sum = 0;
+                for (i = 0; i < studentRecords.length; i++) {
+                    if (studentRecords[i].marks < 50) {
+                        studentRecords[i].marks += 15;
+                     }
+                    if (studentRecords[i].marks > 50) {
+                        sum += studentRecords[i].marks;
+                    }
+                }
+                console.log(sum);
+            </pre>
+        </div>
+        <h3>Create 6 objects , each object will have name, class, roll no as properties. Store these objects in an array of objects. </h3>
+        <div>
+            <h3>Ans.</h3>
+            <pre>
+                obj1={
+                    name: "Akash",
+                    class: "10th",
+                    rollno: "1234"
+                };
+                obj2={
+                    name: "Akash",
+                    class: "10th",
+                    rollno: "1234"
+                };
+                obj3={
+                    name: "Akash",
+                    class: "10th",
+                    rollno: "1234"
+                };
+                obj4={
+                    name: "Akash",
+                    class: "10th",
+                    rollno: "1234"
+                };
+                obj5={
+                    name: "Akash",
+                    class: "10th",
+                    rollno: "1234"
+                };
+                obj6={
+                    name: "Akash",
+                    class: "10th",
+                    rollno: "1234"
+                };
+        
+                ar=[];
+                ar.push(obj1);
+                ar.push(obj2);
+                ar.push(obj3);
+                ar.push(obj4);
+                ar.push(obj5);
+                ar.push(obj6);
+                console.log(ar);
+            </pre>
+        </div>
+    </div> 
+        
+</body>
+</html>

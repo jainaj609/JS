@@ -135,26 +135,51 @@
 //types of conditional statements  - if , if else , ladder if else , neseted if else , switch case.
 //1. if - if your given condition is true then only your code under if scope will excute.
 
-let a = 10;
-if(a>0) {
-  console.log("A is a positive number");
-}
-let b =5;
-if(b>0) {
-  console.log("B is a positive number");
-}
+// let a = 10;
+// if(a>0) {
+//   console.log("A is a positive number");
+// }
+// let b =5;
+// if(b>0) {
+//   console.log("B is a positive number");
+// }
 
 //2. if else - This statement is used when you checking for two condition and those condition are opposite to each other.
 
-let n = 5;
-if(n%2===0) {
-  console.log("Even");
-}
-else {
-  console.log("Odd");
-}
+// let n = 5;
+// if(n%2===0) {
+//   console.log("Even");
+// }
+// else {
+//   console.log("Odd");
+// }
 
 
+
+
+
+// While Loop[Entry Check] : First check and then Execute 
+// if condition is false then it exits , if true then it executes
+// NOTE : While loop will not execute if condition is false initially 
+var a = 0;
+while(a>5)
+{
+    console.log("while : ",a)
+    a++;
+    // code
+}
+
+// Do-While Loop[Exit Check] : First execute and then check condition 
+// if condition is false then it exits , if true then it executes
+// NOTE : Do while loop executes atleast once if condition is false initially 
+var b = 0
+do
+{
+    console.log("do-while : ",b)
+    b++;
+    // code
+}
+while(b>5);
 
 
 

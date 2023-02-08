@@ -1,0 +1,13 @@
+.img1 {
+    /* background-image: url('../Images/Component\ 32\ –\ 1/Component 32 – 1.png'); */
+    background-image: url('../Images/lunch_image/lunch_image.png');
+}
+
+.popup2{
+    display: none;
+}
+
+.set_msg2{
+    padding: 17px 32px;
+    text-align: left;
+}

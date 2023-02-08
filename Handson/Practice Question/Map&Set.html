@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            width: 80vw;
+            margin: auto;
+        }
+        h1{
+            margin: 1em auto;
+            font-size: 3em;
+        }
+        h1,
+        h3 {
+            color: darkslateblue;
+        }
+
+        h3+div {
+            width: inherit;
+            height: max-content;
+            background-color: rgba(71, 61, 139, 0.493);
+            border: 1px solid darkslateblue;
+        }
+
+        pre {
+            box-sizing: border-box;
+            width: 100%;
+            border-left: 5px solid darkslateblue;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: white;
+            line-height: 2.5em;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <h1>Map & Set Practice Questions</h1>
+        <h3>Problem: <br><br>
+            You are given a string (STR) of length N, consisting of only the lower case English alphabet.<br>
+            Your task is to remove all the duplicate occurrences of characters in the string.<br><br>
+            
+            Input:<br>
+            abcadeecfb<br><br>
+            
+            Output:<br>
+            abcdef</h3>
+        <div>
+            <h3>Ans.</h3>
+            <pre>
+                let str = "abcadeecfb";
+                let remove_duplicate = (str) => {
+                    let setObject = new Set();
+                    let string = "";
+                    for (let i = 0; i < str.length; i++) {
+                        setObject.add(str[i]);
+                    }
+                    for (const key of setObject.keys()) {
+                        string += key;
+                    }
+                    return string;
+                }
+                console.log(remove_duplicate(str));
+            </pre>
+        </div>
+        <h3>Problem: <br><br>
+
+            You are given a string (STR) of length N, you have to print the count of all alphabet.(using maps)
+            <br><br>
+            Input:<br>
+            abcadeecfb<br><br>
+    
+            Output:<br>
+            a=2<br>
+            b=2<br>
+            c=2<br>
+            d=1<br>
+            e=2<br>
+            f=1</h3>
+        <div>
+            <h3>Ans.</h3>
+            <pre>
+                let str ="abcadeecfb";
+                let Print_count_of_Variables = (str) =>{
+                    for(let i=0; i< str.length; i++ ){
+                    }
+                }
+            </pre>
+        </div>
+    </div>
+</body>
+</html>

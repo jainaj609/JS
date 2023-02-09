@@ -13,8 +13,30 @@
     <h2>Number is prime or not</h2>
 
     <script>
-        document.write("hi<br>");  
+        document.write("hi<br>");
+        s = "I am utkarsh raj";
+        console.log(s);
 
+        var Split_the_string = (S) => {
+            let res ="";
+            let j = 0;
+            let string = "";
+            for (let i = 0; i <= s.length; i++) {
+
+                if (s[i] == " " || s[i] == undefined) {
+                    res += string;
+                    if (s[i] != undefined)
+                        res += "\n";
+                    string = "";
+                    j++;
+                }
+                else {
+                    string += s[i];
+                }
+            }
+            return res;
+        }
+        console.log(Split_the_string(s));
     </script>
 </body>
 

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+    <style>
+        .parent {
+            width: 80vw;
+            margin: auto;
+        }
+
+        h1 {
+            margin: 1em auto;
+            font-size: 3em;
+        }
+
+        h1,
+        h3 {
+            color: darkslateblue;
+        }
+
+        section>div {
+            width: inherit;
+            height: max-content;
+            background-color: rgba(71, 61, 139, 0.493);
+            border: 1px solid darkslateblue;
+        }
+
+        pre {
+            box-sizing: border-box;
+            width: 100%;
+            border-left: 5px solid darkslateblue;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: white;
+            line-height: 2.5em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <h1>Objects</h1>
+        <section>
+            <h3>Question 1: Create a Function?</h3>
+            <p>
+                Complete the function in the editor. In which you are given one object as a parameter, in that object,
+                there is a data member named
+                n
+                a
+                m
+                e
+                . Your task is to create a method inside this object named
+                s
+                e
+                t
+                t
+                e
+                r
+                , such that this method will print the value of the data member named as
+                n
+                a
+                m
+                e
+                .
+            </p>
+
+            <h3>Input Format</h3>
+            <p> The input will contain one name only, which denotes the only data member of the object.</p>
+
+            <h3>Output Format</h3>
+            <p> Your task is to create a method inside this object named as
+                s
+                e
+                t
+                t
+                e
+                r
+                such that this method will print the value of the data member named as a name.
+            </p>
+
+            <h3>Example</h3>
+            <p>Sample Input<br>
+                Utkarsh<br>
+
+                Sample Output<br>
+                Utkarsh<br></p>
+            <div>
+                <h3>Ans.</h3>
+                <pre>
+                    function Check(obj1){
+                        obj1.setter=function(){
+                          console.log(obj1.name);
+                        }
+                    }       
+                </pre>
+            </div>
+        </section>
+
+        <section>
+            <h3>Question 2: Delete a Parameter?</h3>
+            <p> Complete the function in the editor. You have an object as a parameter. In which you have to delete the
+                rollno property from the object and return the object.
+            </p>
+
+            <h3>Input Format</h3>
+            <p> You have to give two inputs one name and the second as rollno separated by new line.</p>
+
+            <h3>Output Format</h3>
+            <p> If you have deleted the rollno property in the object then the code will print "True" otherwise "False".
+            </p>
+
+            <h3>Example</h3>
+            <p>Sample Input<br>
+                Utkarsh <br>
+                129<br>
+
+                Sample Output<br>
+                True<br></p>
+            <div>
+                <h3>Ans.</h3>
+                <pre>
+                    function Check(obj1) {
+                        delete obj1.rollno;
+                        return obj1;
+                    }       
+                </pre>
+            </div>
+        </section>
+
+        <section>
+            <h3>Question 3: Check whether the Package is Dream Package or not?</h3>
+            <p>
+                Complete the function in the editor. In which you are given an object as a parameter.
+                In that object, there is one property named as salary if the salary is maximum than 5 lakh then return
+                "Dream" otherwise return "NotDream".
+            </p>
+
+            <h3>Input Format</h3>
+            <p> The first Line contains 1 package of a student.</p>
+
+            <h3>Output Format</h3>
+            <p>If the salary is a maximum of 5 lakh then return "Dream" otherwise return "NotDream".
+            </p>
+
+            <h3>Example</h3>
+            <p>Sample Input<br>
+                100000<br>
+
+                Sample Output<br>
+                NotDream<br></p>
+            <div>
+                <h3>Ans.</h3>
+                <pre>
+                    function Check(obj1) {
+                        if(obj1.salary>500000){
+                          return "Dream";
+                        }else{
+                          return "NotDream";
+                        }
+                    }       
+                </pre>
+            </div>
+        </section>
+
+        <section>
+            <h3>Question 4: Check whether the Object has a parameter or not?</h3>
+            <p>Complete the function in the editor. In which you are given an object as a parameter. You have to return
+                "false" if there is no parameter in the object otherwise return "true".
+            </p>
+
+            <h3>Input Format</h3>
+            <p> 0 as a means no variable in an object and 1 means there are variables in an object.</p>
+
+            <h3>Output Format</h3>
+            <p> Return "false" if there is no parameter in the object otherwise return "true".
+            </p>
+
+            <h3>Example</h3>
+            <p>Sample Input<br>
+                1 <br>
+
+                Sample Output<br>
+                true<br></p>
+            <div>
+                <h3>Ans.</h3>
+                <pre>
+                    function Check(obj1) {
+                        if(obj1.name==1)
+                        return true;
+                        else
+                        return false;
+                    }       
+                </pre>
+            </div>
+        </section>
+
+        <section>
+            <h3>Question 5: Merge the Objects?</h3>
+            <p>
+                Complete the function in the editor. In which you are given two objects as a parameter.In which you have
+                to merge two objects and return a single object.
+            </p>
+
+            <h3>Input Format</h3>
+            <p> The input consists of four lines,
+                In which first lines contains two data members of first object which are defined as name and id. And the
+                next two lines contains two data members for the second object which are defined as state and code.</p>
+
+            <h3>Output Format</h3>
+            <p> Just complete the function.
+            </p>
+
+            <h3>Example</h3>
+            <p>Sample Input<br>
+                Utkarsh <br>
+                129<br>
+                Haryana<br>
+                121009<br><br>
+
+                Sample Output<br>
+                Utkarsh <br>
+                129<br>
+                Haryana<br>
+                121009</p>
+            <div>
+                <h3>Ans.</h3>
+                <pre>
+                    function Check(obj1,obj2) {
+                        obj1.state = obj2.state;
+                        obj1.code = obj2.code;
+                        return obj1;
+                    }      
+                </pre>
+            </div>
+        </section>
+
+        <section>
+            <h3>Question 6: Object Multiplyer?</h3>
+            <p>
+                Complete the function in the editor. In which you are given an object and a digit N as a parameter.In
+                the object there are two variable id and houseno are defined as a data member. You have to multiply both
+                the data members with a given digit N.
+            </p>
+
+            <h3>Input Format</h3>
+            <p> There are three line in input, where the first one contains N,
+                And the next two lines contains the first data member i.e. id and second data member i.e. houseno.</p>
+
+            <h3>Output Format</h3>
+            <p> Just complete the function, No need to print anything.
+            </p>
+
+            <h3>Example</h3>
+            <p>Sample Input <br>
+                2<br>
+                12<br>
+                146<br><br>
+
+                Sample Output<br>
+                24<br>
+                292</p>
+            <div>
+                <h3>Ans.</h3>
+                <pre>
+                    function Check(a,obj1) {
+                        obj1.id = obj1.id*a;
+                        obj1.houseno = obj1.houseno*a;
+                        return obj1;
+                    }       
+                </pre>
+            </div>
+        </section>
+
+        <section>
+            <h3>Question 7: Find the sum of Object Members?</h3>
+            <p>
+                You are given a function Check which takes an object
+                O
+                b
+                j
+                as a parameter.
+                Your taks is to find out the sum of the three data members of the object. The data members are named as
+                p1, p2, p3.
+                <br>
+                Note: You have to complete Check function. No need to take any input.
+            </p>
+
+            <h3>Input Format</h3>
+            <p> The input contains three number
+                p
+                1
+                ,
+                p
+                2
+                and
+                p
+                3
+                , which represents the data members of the object.</p>
+
+            <h3>Output Format</h3>
+            <p> Return the sum of all members of the given object.
+            </p>
+
+            <h3>Example</h3>
+            <p>Sample Input<br>
+                1 <br>
+                2 <br>
+                3 <br><br>
+
+                Sample Output<br>
+                6</p>
+            <div>
+                <h3>Ans.</h3>
+                <pre>
+                    function Check(obj1) {
+                        return obj1.p1+obj1.p2+obj1.p3; 
+                    }      
+                </pre>
+            </div>
+        </section>
+
+        <section>
+            <h3>Question 8: Check whether the Objects are same or not.?</h3>
+            <p>Complete the function in the editor. In which you are given an object as a parameter. That object contains two variables name and id.
+                Your task is to compare the object name and id to the new_name and new_id given there as a parameter.
+            <br>    Return "true" if new_name and id are same as objects name and id otherwise return  "false".
+            </p>
+
+            <h3>Input Format</h3>
+            <p> The first line contains one name and one id separated by new line. <br>
+                The second line contains new_name and new_id separated by new line.</p>
+
+            <h3>Output Format</h3>
+            <p> Return "true" if both objects are same else return "false".
+            </p>
+
+            <h3>Example</h3>
+            <p>Sample Input <br>
+                Utkarsh <br>
+                2 <br>
+                Prepbytes <br>
+                3<br><br>
+                
+                Sample Output<br>
+                false</p>
+            <div>
+                <h3>Ans.</h3>
+                <pre>
+                    function check(obj1,a,b) {
+                        if(a==obj1.name && b==obj1.id){
+                          return true;
+                        } else{
+                          return false;
+                        }
+                    }      
+                </pre>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

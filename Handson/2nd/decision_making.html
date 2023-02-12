@@ -2,186 +2,545 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Decision Making</title>
-    <style>
-        .parent{
-            width: 80vw;
-            margin: auto;
-        }
-        h1{
-            margin: 1em auto;
-            font-size: 3em;
-        }
-        h1,
-        h3 {
-            color: darkslateblue;
-        }
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Decision Making</title>
+  <style>
+    .parent {
+      width: 80vw;
+      margin: auto;
+    }
 
-        h3+div {
-            width: inherit;
-            height: max-content;
-            background-color: rgba(71, 61, 139, 0.493);
-            border: 1px solid darkslateblue;
-        }
+    h1 {
+      margin: 1em auto;
+      font-size: 3em;
+    }
 
-        pre {
-            box-sizing: border-box;
-            width: 100%;
-            border-left: 5px solid darkslateblue;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            background-color: white;
-            line-height: 2.5em;
-        }
-    </style>
+    h1,
+    h3 {
+      color: darkslateblue;
+    }
+
+    section>div {
+      width: inherit;
+      height: max-content;
+      background-color: rgba(71, 61, 139, 0.493);
+      border: 1px solid darkslateblue;
+    }
+
+    pre {
+      box-sizing: border-box;
+      width: 100%;
+      border-left: 5px solid darkslateblue;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      background-color: white;
+      line-height: 2.5em;
+    }
+
+    p,
+    ul {
+      color: #707070;
+    }
+
+    @media screen and (min-width: 250px) and (max-width: 400px) {
+      pre {
+        overflow: scroll;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <div class="parent">
+  <div class="parent">
     <h1>Decision Making</h1>
-    <h3>Question 1: Calculator?</h3>
-    <div>
+
+    <section>
+      <h3>Question 1: Calculator?</h3>
+      <p>Write a program to make a simple calculator using switch statement that takes operator and two numbers from
+        user and print the result after operation.
+
+        <br>Note: You have to complete Calculator. No need to take any input
+      </p>
+
+      <h3>Input Format</h3>
+      <p>The input contains a operator symbol
+        (
+        +
+        ,
+        −
+        ,
+        ∗
+        ,
+        /
+        )
+        along with two natural numbers
+        B
+        and
+        C
+        . </p>
+
+      <h3>Output Format</h3>
+      <p>Return the required result.
+      </p>
+
+      <h3>Example</h3>
+      <p>Sample Input<br>
+        + 1 2 <br>
+
+        Sample Output<br>
+        3 </p>
+      <div>
         <h3>Ans.</h3>
         <pre>
-            const Calculator = (A, B, C) => {
-	            switch(A){
-	                case "+":
-	                    return B+C;
-	                case "-":
-	                    return B-C;
-	                case "*":
-	                    return B*C;
-	                case "/":
-	                    return B/C;
-	            }
-            };        
+          const Calculator = (A, B, C) => {
+            switch(A){
+                case "+":
+                    return B+C;
+                case "-":
+                    return B-C;
+                case "*":
+                    return B*C;
+                case "/":
+                    return B/C;
+            }
+          };       
         </pre>
-    </div>
-    <h3>Question 2: Check whether the condition is fulfilled or not?</h3>
-    <div>
+      </div>
+    </section>
+
+    <section>
+      <h3>Question 2: Check whether the condition is fulfilled or not?</h3>
+      <p>Write a program that takes a number and prints whether the number is divisible by
+        6
+        and
+        9
+        or not.
+        <br>Note: You have to complete Check_divisibility. No need to take any input
+      </p>
+
+      <h3>Input Format</h3>
+      <p>The input contains a single number
+        N
+        . </p>
+
+      <h3>Output Format</h3>
+      <p>If the condition is satisfied return "Divisible by both" (without quotes) else return "Not Divisible by both"
+        (without quotes).
+      </p>
+
+      <h3>Example</h3>
+      <p>Sample Input 1 <br>
+        36<br><br>
+
+        Sample Output 1<br>
+        Divisible by both<br><br>
+
+        Sample Input 2<br>
+        27<br><br>
+
+        Sample Output 2<br>
+        Not Divisible by both<br>
+      </p>
+      <div>
         <h3>Ans.</h3>
         <pre>
-            const Check_divisibility = (N) => {
-                if(N%6===0 && N%9===0){
-                  return "Divisible by both";
-                }else{
-                  return "Not Divisible by both";
-                }
-            };      
-        </pre>
-    </div>
-    <h3>Question 3: Eligible Voter?</h3>
-    <div>
+          const Check_divisibility = (N) => {
+            if(N%6===0 && N%9===0){
+              return "Divisible by both";
+            }else{
+              return "Not Divisible by both";
+            }
+        };      
+          </pre>
+      </div>
+    </section>
+
+    <section>
+      <h3>Question 3: Eligible Voter?</h3>
+      <p>You are given an integer
+        A
+        , denoting the age of a person, and your task is to determine whether he/she is eligible to vote or not.
+        <br>Note: You have to complete isEligible function. No need to take any input
+      </p>
+
+      <h3>Input Format</h3>
+      <p> The first and the only line of the input contains an integer
+        A
+        , representing the age of a person.</p>
+
+      <h3>Output Format</h3>
+      <p>If the person is eligible to vote, return "Eligible for Voting" otherwise, return "Not Eligible for Voting"
+        (without quotes).
+      </p>
+
+      <h3>Example</h3>
+      <p>Sample Input<br>
+        13<br>
+
+        Sample Output<br>
+        Not Eligible for Voting
+      </p>
+      <div>
         <h3>Ans.</h3>
         <pre>
-            const isEligible = (a) => {
-                if(a >= 18 && a <= 120){
-                return "Eligible for Voting";
-                }else{
-                return "Not Eligible for Voting";
-                }
-            };        
-        </pre>
-    </div>
-    <h3>Question 4: Find Relation?</h3>
-    <div>
+          const isEligible = (a) => {
+            if(a >= 18 && a <= 120){
+            return "Eligible for Voting";
+            }else{
+            return "Not Eligible for Voting";
+            }
+        };        
+          </pre>
+      </div>
+    </section>
+
+    <section>
+      <h3>Question 4: Find Relation?</h3>
+      <p>PrepBuddy wants you to get familiar with various Relational operators. He provides you with two integer values
+        X
+        and
+        Y
+        and asks you to find the relation between them. <br>
+        The relationships between integers
+        X
+        and
+        Y
+        are as follows: <br>
+      <ul>
+        <li>If
+          X
+          < Y , it means that X is smaller than Y . </li>
+        <li>If
+          X
+          >
+          Y
+          , it means that
+          X
+          is greater than
+          Y
+          .</li>
+        <li>If
+          X
+          =
+          Y
+          , it means that
+          X
+          is equal to
+          Y
+          .</li>
+      </ul>
+      <br>Note: You have to complete findRelationship function. No need to take any input.
+      </p>
+
+      <h3>Input Format</h3>
+      <p> The first and the only line of the input contains two space-separated integers
+        X
+        and
+        Y
+        , denoting the integers which PrepBuddy gives you.</p>
+
+      <h3>Output Format</h3>
+      <p>Return the relationship between the integers that PrepBuddy gave you.
+      </p>
+
+      <h3>Example</h3>
+      <p>Sample Input<br>
+        3 11<br>
+
+        Sample Output<br>
+        3 is smaller than 11
+      </p>
+      <div>
         <h3>Ans.</h3>
         <pre>
-            const findRelation = (x,y) => {
-                if(x < y){
-                  return x + " is smaller than " + y;
-                } else if(x > y){
-                  return x +" is greater than "+y;
-                }else{
-                  return x +" is equal to "+y;
-                }
-            };        
-        </pre>
-    </div>
-    <h3>Question 5: Find Grades?</h3>
-    <div>
+          const findRelation = (x,y) => {
+            if(x < y){
+              return x + " is smaller than " + y;
+            } else if(x > y){
+              return x +" is greater than "+y;
+            }else{
+              return x +" is equal to "+y;
+            }
+        };       
+          </pre>
+      </div>
+    </section>
+
+    <section>
+      <h3>Question 5: Find Grades?</h3>
+      <p>Your school has the following grading system based upon the marks(M) obtained by a student:
+        <ul>
+        <li>If
+          M
+          ≤
+          10
+          , the grade will be
+          E
+          .</li>
+        <li>If
+          11
+          ≥
+          M
+          ≤
+          20
+          , the grade will be
+          D
+          .</li>
+        <li>If
+          21
+          ≥
+          M
+          ≤
+          30
+          , the grade will be
+          C
+          .</li>
+        <li>If
+          31
+          ≥
+          M
+          ≤
+          40
+          , the grade will be
+          B
+          .</li>
+        <li>If
+          41
+          ≥
+          M
+          ≤
+          50
+          , the grade will be
+          A
+          .</li>
+        </ul> 
+        Your friend will enter his marks out of
+         50
+        , and your task is to print his grades using a switch statement. <br>
+        Note: You have to complete findGrades function. No need to take any input.
+      </p>
+
+      <h3>Input Format</h3>
+      <p> The first and the only line of the input contains an integer
+        M
+        , representing the marks that your friend will enter in the grading system.</p>
+
+      <h3>Output Format</h3>
+      <p>Return the grade obtained by your friend.
+      </p>
+
+      <h3>Example</h3>
+      <p>Sample Input<br>
+        1<br>
+
+        Sample Output<br>
+        E
+      </p>
+      <div>
         <h3>Ans.</h3>
         <pre>
-            const findGrades = (a) => {
-                if(a<=10){
-                  return "E";
-                }else if(a<=20){
-                  return "D";
-                }else if(a<=30){
-                  return "C";
-                }else if(a<=40){
-                  return "B";
-                }else{
-                  return "A";
-                }  
-            };   
-        </pre>
-    </div>
-    <h3>Question 6: Get Value?</h3>
-    <div>
+          const findGrades = (a) => {
+            if(a<=10){
+              return "E";
+            }else if(a<=20){
+              return "D";
+            }else if(a<=30){
+              return "C";
+            }else if(a<=40){
+              return "B";
+            }else{
+              return "A";
+            }  
+        };     
+          </pre>
+      </div>
+    </section>
+
+    <section>
+      <h3>Question 6: Get Value?</h3>
+      <p>You are provided with a table containing some characters and their corresponding values. Your task will be to find the value from the table corresponding to an input character and return it.
+        <br>&nbsp;P or p 	- PrepBytes 
+        <br>&nbsp;Z or z 	- Zenith 
+        <br>&nbsp;E or e 	- Expert Coder 
+        <br>&nbsp;D or d 	- Data Structure
+        <br>Note: You have to complete getValue function. No need to take any input.
+      </p>
+
+      <h3>Input Format</h3>
+      <p> The first and the only line of the input contains a character 
+        C
+        , representing the character that you will get in input.</p>
+
+      <h3>Output Format</h3>
+      <p>Return the value corresponding to the input character.
+      </p>
+
+      <h3>Example</h3>
+      <p>Sample Input<br>
+        E<br>
+
+        Sample Output<br>
+        Expert Coder
+      </p>
+      <div>
         <h3>Ans.</h3>
         <pre>
-            const getValue = (a) => {
-                if(a==="P" || a==="p"){
-                  return "PrepBytes";
-                }else if(a==="Z" || a==="z"){
-                  return "Zenith";
-                }else if(a==="E" || a==="e"){
-                  return "Expert Coder";
-                }else if(a==="D" || a==="d"){
-                  return "Data Structure";
-                }
-            };              
-        </pre>
-    </div>
-    <h3>Question 7: Find the maximum out of three numbers.?</h3>
-    <div>
-        <h3>Ans.</h3>
-        <pre>          
-            const Max_out_of_three = (A,B,C) => {
-              if(A>B && A>C){
-                return A;
-              }else if(B>A && B>C){
-                return B;
-              }else if(C>B && C>A){
-                return C;
-              }else{
-                return -1;
-              }
-            };
-        </pre>
-    </div>
-    <h3>Question 8: Second Smallest?</h3>
-    <div>
-        <h3>Ans.</h3>
-        <pre>
-            const findSndSmallest = (x,y,z) => {
-                if((y > x && y < z) || (y < x && y > z)){
-                  return y;
-                }else if((x < y && x>z) || (x > y && x < z)){
-                  return x;
-                }else{
-                  return z;
-                }
-            };                   
-        </pre>
-    </div>
-    <h3>Question 9: Check whether the triangle is Acute or Obtuse?</h3>
-    <div>
+          const getValue = (a) => {
+            if(a==="P" || a==="p"){
+              return "PrepBytes";
+            }else if(a==="Z" || a==="z"){
+              return "Zenith";
+            }else if(a==="E" || a==="e"){
+              return "Expert Coder";
+            }else if(a==="D" || a==="d"){
+              return "Data Structure";
+            }
+        };      
+          </pre>
+      </div>
+    </section>
+
+    <section>
+      <h3>Question 7: Find the maximum out of three numbers.?</h3>
+      <p>Take three numbers and print the largest number among them if all of three are same print  
+        −
+        1
+        .
+        <br>Note: You have to complete Max_out_of_three. No need to take any input.
+      </p>
+
+      <h3>Input Format</h3>
+      <p> The input contains three numbers 
+        A
+        , 
+        B
+         and 
+        C
+        .</p>
+
+      <h3>Output Format</h3>
+      <p>Return the maximum number out of the three numbers as result.
+      </p>
+
+      <h3>Example</h3>
+      <p>Sample Input<br>
+        2 5 4<br>
+
+        Sample Output<br>
+        5
+      </p>
+      <div>
         <h3>Ans.</h3>
         <pre>
-            const Triangle_Check = (A,B,C) => {
-                if(A < 90 && B < 90 && C < 90){
-                  return "acute";
-                }else{
-                  return "obtuse"
-                }
-            };              
-        </pre>
-    </div>
-</div>
+          const Max_out_of_three = (A,B,C) => {
+            if(A>B && A>C){
+              return A;
+            }else if(B>A && B>C){
+              return B;
+            }else if(C>B && C>A){
+              return C;
+            }else{
+              return -1;
+            }
+          };       
+          </pre>
+      </div>
+    </section>
+
+    <section>
+      <h3>Question 8: Second Smallest?</h3>
+      <p>You are given 
+        3
+         distinct integers 
+        X
+        ,
+        Y
+        ,
+         and 
+        Z
+        ,
+         and your task is to find and return the second smallest integer among the three provided integers.
+        <br>Note: You have to complete findSndSmallest function. No need to take any input.
+      </p>
+
+      <h3>Input Format</h3>
+      <p> The first and the only line of the input contains three space-separated integers 
+        X
+        , 
+        Y
+        , and 
+        Z
+        , denoting the integers among which you have to find the second smallest element.</p>
+
+      <h3>Output Format</h3>
+      <p>Return the second smallest integer among the three integers given to you.
+      </p>
+
+      <h3>Example</h3>
+      <p>Sample Input<br>
+        2 9 23<br>
+
+        Sample Output<br>
+        9
+      </p>
+      <div>
+        <h3>Ans.</h3>
+        <pre>
+          const findSndSmallest = (x,y,z) => {
+            if((y > x && y < z) || (y < x && y > z)){
+              return y;
+            }else if((x < y && x>z) || (x > y && x < z)){
+              return x;
+            }else{
+              return z;
+            }
+        };       
+          </pre>
+      </div>
+    </section>
+
+    <section>
+      <h3>Question 9: Check whether the triangle is Acute or Obtuse?</h3>
+      <p>Write a program takes takes three angles and checks whether the triangle is acute or obtuse.
+        <br>Note: You have to complete Triangle_Check. No need to take any input
+      </p>
+
+      <h3>Input Format</h3>
+      <p> The input contains three numbers 
+        A
+        , 
+        B
+         and 
+        C
+         which denotes the angles of a triangle.</p>
+
+      <h3>Output Format</h3>
+      <p>Return the required result.
+      </p>
+
+      <h3>Example</h3>
+      <p>Sample Input<br>
+        60 100 20<br>
+
+        Sample Output<br>
+        obtuse
+      </p>
+      <div>
+        <h3>Ans.</h3>
+        <pre>
+          const Triangle_Check = (A,B,C) => {
+            if(A < 90 && B < 90 && C < 90){
+              return "acute";
+            }else{
+              return "obtuse"
+            }
+        };       
+          </pre>
+      </div>
+    </section>
+
+  </div>
 </body>
 
 </html>

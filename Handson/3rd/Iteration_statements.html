@@ -13,8 +13,6 @@
         .parent {
             width: 80vw;
             margin: auto;
-            font-family: 'Roboto', sans-serif;
-            color: rgb(165, 49, 49);
         }
 
         h1 {
@@ -27,7 +25,7 @@
             color: darkslateblue;
         }
 
-        h3+div {
+        section>div {
             width: inherit;
             height: max-content;
             background-color: rgba(71, 61, 139, 0.493);
@@ -42,128 +40,386 @@
             background-color: white;
             line-height: 2.5em;
         }
+
+        p,
+        ul {
+            color: #707070;
+        }
+
+        @media screen and (min-width: 250px) and (max-width: 400px) {
+            pre {
+                overflow: scroll;
+            }
+        }
     </style>
 </head>
 
 <body>
     <div class="parent">
+
         <h1>Iteration Statements</h1>
-        <h3>Question 1: Find the number of digits?</h3>
-        <div>
-            <h3>Ans.</h3>
-            <pre>
-            const Find_Digits = (N) => 
-            {
-                 let count=0;
-                 while(N!=0){
-                   count++;
-                   N = Math.floor(N/10);
-                 }
-                 return count;
-            };         
-        </pre>
-        </div>
-        <h3>Question 2: Find the Fives?</h3>
-        <div>
-            <h3>Ans.</h3>
-            <pre>
-            const Find_Five = (N) => {
-                let count = 0, check = 0;
-                while (N != 0) {
-                    check = N % 10;
-                    if (check === 5) {
-                        count++;
-                    }
-                    N = Math.floor(N / 10);
-                }
-                return count;
-            };     
-        </pre>
-        </div>
-        <h3>Question 3: Find Sum?</h3>
-        <div>
-            <h3>Ans.</h3>
-            <pre>
-            const findSum = (n) => {
-                let it, ans=0;
-                for(it=1; it<=n; it++){
-                   if(it%2===0){
-                     ans+=it;
-                   }
-                 }
-                 return ans;  
-            };         
-        </pre>
-        </div>
-        <h3>Question 4: Find the sum of the digits of a given number?</h3>
-        <div>
-            <h3>Ans.</h3>
-            <pre>
-            const Number_Sum = (N) => 
-            {
-                let total=0 ;
-                while(N!=0){
-                  let number=0;
-                  number = N%10;
-                  total = total+number;
-                  N = Math.floor(N/10);
-                }
-                return total;
-            };         
-        </pre>
-        </div>
-        <h3>Question 5: Print the Odds?</h3>
-        <div>
-            <h3>Ans.</h3>
-            <pre>
-            const Print_Odd = (N) => 
-            {
-                let i=0;
-                console.log(2);
-                for(i=3; i<=N; i=i+2){
-                     console.log(i);
-                 }
-            };    
-        </pre>
-        </div>
-        <h3>Question 6: Print the Pattern?</h3>
-        <div>
-            <h3>Ans.</h3>
-            <pre>
-                const Print_pattern = (N) => 
+        <section>
+            <h3>Question 1: Find the number of digits?</h3>
+            <p>Take a number from the user and print the count of digits in that number.
+
+                <br>Note: You have to complete Find_Digits. No need to take any input.
+            </p>
+
+            <h3>Input Format</h3>
+            <p>The input contains a single number
+                N
+                .</p>
+
+            <h3>Output Format</h3>
+            <p>Return the count of digits in the given number.
+            </p>
+
+            <h3>Example</h3>
+            <p>Sample Input<br>
+                1234<br>
+
+                Sample Output<br>
+                4 </p>
+            <div>
+                <h3>Ans.</h3>
+                <pre>
+                const Find_Digits = (N) => 
                 {
-                    for(let i=1; i<=N; i++){
-                        let s="";
-                        for(let j=1; j<=i; j++){
-                            s=s+"*";   
+                     let count=0;
+                     while(N!=0){
+                       count++;
+                       N = Math.floor(N/10);
+                     }
+                     return count;
+                };      
+              </pre>
+            </div>
+        </section>
+
+        <section>
+            <h3>Question 2: Find the Fives?</h3>
+            <p>Among all the digits from 0−9, PrepBuddy likes number 5. He has a number and wants you to find out the
+                number of times 5 occurred in the given number.
+
+                <br>Note: You have to complete Find_Five. No need to take any input.
+            </p>
+
+            <h3>Input Format</h3>
+            <p>The input contains a single number
+                N
+                . </p>
+
+            <h3>Output Format</h3>
+            <p>Return the number of fives as the desired output.
+            </p>
+
+            <h3>Example</h3>
+            <p>Sample Input<br>
+                345654 <br>
+
+                Sample Output<br>
+                2 </p>
+            <div>
+                <h3>Ans.</h3>
+                <pre>
+                const Find_Five = (N) => {
+                    let count = 0, check = 0;
+                    while (N != 0) {
+                        check = N % 10;
+                        if (check === 5) {
+                            count++;
                         }
-                    console.log(s);
+                        N = Math.floor(N / 10);
                     }
-                };               
-        </pre>
-        </div>
-        <h3>Question 7: Check whether a Number is a prime or not?</h3>
-        <div>
-            <h3>Ans.</h3>
-            <pre>
-            const Prime_Check = (N) => {
-                let s = "";
-                if (N == 1) {
-                    s = "NO";
-                }
-                for (let i = 2; i < N; i++) {
-                    if (N % i == 0) {
-                        s = "NO";
+                    return count;
+                };       
+              </pre>
+            </div>
+        </section>
+
+
+        <section>
+            <h3>Question 3: Find Sum?</h3>
+            <p>You are given an integer
+                N
+                , and your task is to find the sum of all the even integers starting from
+                1
+                upto
+                N
+                (
+                N
+                inclusive).
+
+                <br>Note: You have to complete findSum function. No need to take any input.
+            </p>
+
+            <h3>Input Format</h3>
+            <p>The first and the only line of the input contains an integer
+                N
+                . </p>
+
+            <h3>Output Format</h3>
+            <p>Return the sum of all even integers from
+                1
+                upto
+                N
+                (N inclusive).
+            </p>
+
+            <h3>Example</h3>
+            <p>Sample Input<br>
+                6 <br>
+
+                Sample Output<br>
+                12 </p>
+            <div>
+                <h3>Ans.</h3>
+                <pre>
+                const findSum = (n) => {
+                    let it, ans=0;
+                    for(it=1; it<=n; it++){
+                       if(it%2===0){
+                         ans+=it;
+                       }
+                     }
+                     return ans;  
+                };       
+              </pre>
+            </div>
+        </section>
+
+
+        <section>
+            <h3>Question 4: Find the sum of the digits of a given number?</h3>
+            <p>Write a program that takes a number from the user and get the sum of the digits present in the number.
+
+                <br>Note: You have to complete Number_Sum. No need to take any input.
+            </p>
+
+            <h3>Input Format</h3>
+            <p>The input contains a single number
+                N
+                . </p>
+
+            <h3>Output Format</h3>
+            <p>Return the sum of the digits of the number.
+            </p>
+
+            <h3>Example</h3>
+            <p>Sample Input<br>
+                1234 <br>
+
+                Sample Output<br>
+                10 </p>
+            <div>
+                <h3>Ans.</h3>
+                <pre>
+                const Number_Sum = (N) => 
+                {
+                    let total=0 ;
+                    while(N!=0){
+                      let number=0;
+                      number = N%10;
+                      total = total+number;
+                      N = Math.floor(N/10);
                     }
-                }
-                if (s == "NO") {
-                    return "NO";
-                } else {
-                    return "YES";
-                }
-            };                  
-        </pre>
-        </div>
+                    return total;
+                };      
+              </pre>
+            </div>
+        </section>
+
+        <section>
+            <h3>Question 5: Print the Odds?</h3>
+            <p>Write a program which takes a number from user and print all odd numbers in between 2 and N, but print 2
+                first.
+
+                <br>Note: You have to complete Print_Odd. No need to take any input.
+            </p>
+
+            <h3>Input Format</h3>
+            <p>The input contains a single number
+                N
+                .</p>
+
+            <h3>Output Format</h3>
+            <p>Print the desired output.
+            </p>
+
+            <h3>Example</h3>
+            <p>Sample Input<br>
+                10 <br>
+
+                Sample Output<br>
+                2 <br>
+                3<br>
+                5<br>
+                7<br>
+                9 </p>
+            <div>
+                <h3>Ans.</h3>
+                <pre>
+                const Print_Odd = (N) => 
+                {
+                    let i=0;
+                    console.log(2);
+                    for(i=3; i<=N; i=i+2){
+                         console.log(i);
+                     }
+                };       
+              </pre>
+            </div>
+        </section>
+
+        <section>
+            <h3>Question 6: Print the Pattern?</h3>
+            <p>Write a program which ask user for no of lines and print a pattern using an asterik .
+
+                <br>Note: You have to complete Print_pattern. No need to take any input.
+            </p>
+
+            <h3>Input Format</h3>
+            <p>The input contains a single number 
+                N
+                . </p>
+
+            <h3>Output Format</h3>
+            <p>Print the required pattern.
+            </p>
+
+            <h3>Example</h3>
+            <p>Sample Input<br>
+                5 <br>
+
+                Sample Output<br>
+                * <br>
+**<br>
+***<br>
+****<br>
+*****</p>
+            <div>
+                <h3>Ans.</h3>
+                <pre>
+                    const Print_pattern = (N) => 
+                    {
+                        for(let i=1; i<=N; i++){
+                            let s="";
+                            for(let j=1; j<=i; j++){
+                                s=s+"*";   
+                            }
+                        console.log(s);
+                        }
+                    };       
+              </pre>
+            </div>
+        </section>
+
+        <section>
+            <h3>Question 7: Check whether a Number is a prime or not?</h3>
+            <p>Write a program which takes  a number from user and check whether number is prime number or not a prime number.
+
+                <br>Note: You have to complete Prime_Check. No need to take any input.
+            </p>
+
+            <h3>Input Format</h3>
+            <p>The input contains a single number 
+                N
+                .</p>
+
+            <h3>Output Format</h3>
+            <p>Return "YES" if the given number is Prime, else print "NO"(without quotes).
+            </p>
+
+            <h3>Example</h3>
+            <p>Sample Input 1 <br>
+                7<br><br>
+                
+                Sample Output 1<br>
+                YES<br><br>
+                
+                Sample Input 2<br>
+                4<br><br>
+                
+                Sample Output 2<br>
+                NO</p>
+            <div>
+                <h3>Ans.</h3>
+                <pre>
+                    const Prime_Check = (N) => {
+                        let s = "";
+                        if (N == 1) {
+                            s = "NO";
+                        }
+                        for (let i = 2; i < N; i++) {
+                            if (N % i == 0) {
+                                s = "NO";
+                            }
+                        }
+                        if (s == "NO") {
+                            return "NO";
+                        } else {
+                            return "YES";
+                        }
+                    };       
+              </pre>
+            </div>
+        </section>
+
+        <section>
+            <h3>Question 1: Calculator?</h3>
+            <p>Write a program to make a simple calculator using switch statement that takes operator and two numbers
+                from
+                user and print the result after operation.
+
+                <br>Note: You have to complete Calculator. No need to take any input
+            </p>
+
+            <h3>Input Format</h3>
+            <p>The input contains a operator symbol
+                (
+                +
+                ,
+                −
+                ,
+                ∗
+                ,
+                /
+                )
+                along with two natural numbers
+                B
+                and
+                C
+                . </p>
+
+            <h3>Output Format</h3>
+            <p>Return the required result.
+            </p>
+
+            <h3>Example</h3>
+            <p>Sample Input<br>
+                + 1 2 <br>
+
+                Sample Output<br>
+                3 </p>
+            <div>
+                <h3>Ans.</h3>
+                <pre>
+                const Calculator = (A, B, C) => {
+                  switch(A){
+                      case "+":
+                          return B+C;
+                      case "-":
+                          return B-C;
+                      case "*":
+                          return B*C;
+                      case "/":
+                          return B/C;
+                  }
+                };       
+              </pre>
+            </div>
+        </section>
+
         <h3>Question 8: Print Numbers?</h3>
         <div>
             <h3>Ans.</h3>
@@ -175,17 +431,54 @@
                 };            
         </pre>
         </div>
-        <h3>Question 9: Print the Table?</h3>
-        <div>
-            <h3>Ans.</h3>
-            <pre>
+
+        <section>
+            <h3>Question 9: Print the Table?</h3>
+            <p>
+
+                <br>
+            </p>
+
+            <h3>Input Format</h3>
+            <p>The input contains a operator symbol
+                (
+                +
+                ,
+                −
+                ,
+                ∗
+                ,
+                /
+                )
+                along with two natural numbers
+                B
+                and
+                C
+                . </p>
+
+            <h3>Output Format</h3>
+            <p>Return the required result.
+            </p>
+
+            <h3>Example</h3>
+            <p>Sample Input<br>
+                + 1 2 <br>
+
+                Sample Output<br>
+                3 </p>
+            <div>
+                <h3>Ans.</h3>
+                <pre>
                 const Print_Table = (N) => {
                     for (i = 1; i <= 10; i++) {
                         console.log(N + " * " + i + " = " + N * i);
                     }
-                };
-            </pre>
-        </div>
+                };       
+              </pre>
+            </div>
+        </section>
+
+
     </div>
 </body>
 

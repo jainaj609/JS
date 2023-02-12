@@ -92,7 +92,7 @@
                 <pre>
                     function Check(obj1){
                         obj1.setter=function(){
-                          console.log(obj1.name);
+                          console.log(this.name);
                         }
                     }       
                 </pre>
@@ -188,10 +188,14 @@
                 <h3>Ans.</h3>
                 <pre>
                     function Check(obj1) {
-                        if(obj1.name==1)
-                        return true;
-                        else
-                        return false;
+                        let counter=0;
+                        for(let v in obj1){
+                          counter++;
+                        }
+                       if(counter>0)
+                       return true;
+                       else
+                       return false;
                     }       
                 </pre>
             </div>

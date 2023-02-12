@@ -2,57 +2,89 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <title>Arrays</title>
-    <style>
-        .parent {
-            width: 80vw;
-            margin: auto;
-            font-family: 'Roboto', sans-serif;
-            color: rgb(165, 49, 49);
-        }
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <title>Arrays</title>
+  <style>
+    .parent {
+      width: 80vw;
+      margin: auto;
+    }
 
-        h1 {
-            margin: 1em auto;
-            font-size: 3em;
-        }
+    h1 {
+      margin: 1em auto;
+      font-size: 3em;
+    }
 
-        h1,
-        h3 {
-            color: darkslateblue;
-        }
+    h1,
+    h3 {
+      color: darkslateblue;
+    }
 
-        h3+div {
-            width: inherit;
-            height: max-content;
-            background-color: rgba(71, 61, 139, 0.493);
-            border: 1px solid darkslateblue;
-        }
+    section>div {
+      width: inherit;
+      height: max-content;
+      background-color: rgba(71, 61, 139, 0.493);
+      border: 1px solid darkslateblue;
+    }
 
-        pre {
-            box-sizing: border-box;
-            width: 100%;
-            border-left: 5px solid darkslateblue;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            /* font-family: 'Consolas','Menlo',"courier new",monospace; */
-            background-color: white;
-            line-height: 2.5em;
-        }
-    </style>
+    pre {
+      box-sizing: border-box;
+      width: 100%;
+      border-left: 5px solid darkslateblue;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      background-color: white;
+      line-height: 2.5em;
+    }
+
+    p,
+    ul {
+      color: #707070;
+    }
+
+    @media screen and (min-width: 250px) and (max-width: 400px) {
+      pre {
+        overflow: scroll;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <div class="parent">
-        <h1>Arrays</h1>
-        <h3>Question 1: Find the Product.?</h3>
-        <div>
-            <h3>Ans.</h3>
-            <pre>
+  <div class="parent">
+    <h1>Arrays</h1>
+    <section>
+      <h3>Question 1: Find the Product.?</h3>
+      <p>Write a program that takes an array as input from the user and find out the product of the elements.
+
+        <br>Note: You have to complete Find_Prod. No need to take any input.
+      </p>
+
+      <h3>Input Format</h3>
+      <p>The input contains a single number
+        N
+        , followed by
+        N
+        numbers as array elements.</p>
+
+      <h3>Output Format</h3>
+      <p>Return the required answer.
+      </p>
+
+      <h3>Example</h3>
+      <p>Sample Input<br>
+        5 <br>
+        1 2 3 4 5<br>
+
+        Sample Output<br>
+        120 </p>
+      <div>
+        <h3>Ans.</h3>
+        <pre>
                 const Find_Prod = (array, N) => 
                 {
                   let product = 1;
@@ -60,27 +92,100 @@
                     product = product * array[i];
                   }
                   return product;
-                };      
-        </pre>
-        </div>
-        <h3>Question 2: Find the Sum.?</h3>
-        <div>
-            <h3>Ans.</h3>
-            <pre>
-                const Find_Sum = (array, N) => 
-                {
-                  let total = 0;
-                  for(let i = 0; i < array.length; i++){
-                    total = total + array[i];
-                  }
-                  return total;
-                }; 
-        </pre>
-        </div>
-        <h3>Question 3: Count Occurrences?</h3>
-        <div>
-            <h3>Ans.</h3>
-            <pre>
+                };       
+            </pre>
+      </div>
+    </section>
+
+    <section>
+      <h3>Question 2: Find the Sum.?</h3>
+      <p>Write a program which takes an array as input from the user and find out the sum of the array elements.
+
+        <br>Note: You have to complete Find_Sum. No need to take any input.
+      </p>
+
+      <h3>Input Format</h3>
+      <p>The input contains a single number
+        N
+        , followed by
+        N
+        numbers as array elements.</p>
+
+      <h3>Output Format</h3>
+      <p>Return the required answer.
+      </p>
+
+      <h3>Example</h3>
+      <p>Sample Input<br>
+        5 <br>
+        1 2 3 4 5<br>
+
+        Sample Output<br>
+        15 </p>
+      <div>
+        <h3>Ans.</h3>
+        <pre>
+              const Find_Sum = (array, N) => 
+              {
+                let total = 0;
+                for(let i = 0; i < array.length; i++){
+                  total = total + array[i];
+                }
+                return total;
+              };       
+          </pre>
+      </div>
+    </section>
+
+    <section>
+      <h3>Question 3: Count Occurrences?</h3>
+      <p>You are given an array
+        A
+        containing
+        N
+        integer elements and an integer
+        K
+        , and your task is to return the count of occurrences of
+        K
+        in array
+        A
+        .
+
+        <br>Note: You have to complete findCount function. No need to take any input.
+      </p>
+
+      <h3>Input Format</h3>
+      <p>The first line of the input contains two space-separated integers
+        N
+        and
+        K
+        , denoting the number of elements in the array
+        A
+        and the element whose count needs to be determined, respectively. <br>
+        The second line of the input contains
+        N
+        space-separated integers, denoting the elements of the array
+        A
+        .</p>
+
+      <h3>Output Format</h3>
+      <p> Return the count of occurrences of
+        K
+        in array
+        A
+        .
+      </p>
+
+      <h3>Example</h3>
+      <p>Sample Input<br>
+        4 3 <br>
+        3 3 1 2<br>
+
+        Sample Output<br>
+        2 </p>
+      <div>
+        <h3>Ans.</h3>
+        <pre>
                 const findCount = (N, K, Arr) => 
                 {
                     let count = 0;
@@ -90,13 +195,70 @@
                       }
                     }
                     return count;
-                };
-            </pre>
-        </div>
-        <h3>Question 4: Even Odd?</h3>
-        <div>
-            <h3>Ans.</h3>
-            <pre>
+                };      
+        </pre>
+      </div>
+    </section>
+
+
+    <section>
+      <h3>Question 4: Even Odd?</h3>
+      <p>You are given an array
+        A
+        containing
+        N
+        integer elements, and your task is to return an array
+        B
+
+        (
+        having a size equal to
+        2
+        )
+        , where
+        B
+        [
+        0
+        ]
+        contains the sum of all even elements of array A and
+        B
+        [
+        1
+        ]
+        has the sum of all odd elements of the array
+        A
+        .
+
+        <br>Note: You have to complete findEvenOdd function. No need to take any input.
+      </p>
+
+      <h3>Input Format</h3>
+      <p>The first line of the input contains an integer
+        N
+        , denoting the number of elements in the array
+        A
+        . <br>
+        The second line of the input contains
+        N
+        space-separated integers, denoting the elements of array
+        A
+        .</p>
+
+      <h3>Output Format</h3>
+      <p>Return array
+        B
+        as output.
+      </p>
+
+      <h3>Example</h3>
+      <p>Sample Input<br>
+        7 <br>
+        1 2 3 4 5 6 7<br>
+
+        Sample Output<br>
+        12 16 </p>
+      <div>
+        <h3>Ans.</h3>
+        <pre>
                 const findEvenOdd = (N, Arr) => 
                 {
                   let b = [], even = 0, odd = 0;
@@ -114,11 +276,45 @@
                   return b;
                 };       
             </pre>
-        </div>
-        <h3>Question 5: Find whether the number is present or not?</h3>
-        <div>
-            <h3>Ans.</h3>
-            <pre>
+      </div>
+    </section>
+
+
+
+    <section>
+      <h3>Question 5: Find whether the number is present or not?</h3>
+      <p>Write a program which takes an array as input from the user and a number.
+        Check whether the number is present or not.
+
+        <br>Note: You have to complete Find_Num. No need to take any input.
+      </p>
+
+      <h3>Input Format</h3>
+      <p>The first line contains an integer
+        N
+        , denoting the size of the array.
+        The second line contains
+        N
+        space-separated integers, denoting the elements of the array. <br>
+        The third line contains an integer
+        M
+        , denoting the element that needs to be searched.</p>
+
+      <h3>Output Format</h3>
+      <p>Return the "YES" (without quotes) else return "NO" (without quotes).
+      </p>
+
+      <h3>Example</h3>
+      <p>Sample Input<br>
+        5 <br>
+        1 2 3 4 5<br>
+        2 <br>
+
+        Sample Output<br>
+        YES </p>
+      <div>
+        <h3>Ans.</h3>
+        <pre>
                 const Find_Num = (array,N,M) => 
                 {
                     let s="";
@@ -132,134 +328,441 @@
                     }else{
                       return "NO"
                     }
-                  };
+                  };       
             </pre>
-        </div>
-        <h3>Question 6: Higher Age?</h3>
-        <div>
-            <h3>Ans.</h3>
-            <pre>
-                const highAge = (N, Arr) => 
-                {
-                    a = [];
-                    for(i = 0; i < N; i++){
-                      if(Arr[i] >= 18){
-                        a.push(Arr[i]);
-                      }
-                    }
-                    return a;
-                };
+      </div>
+    </section>
+
+    <section>
+      <h3>Question 6: Higher Age?</h3>
+      <p>You are given an array
+        A
+        containing the age of persons in your locality, and your task is to find and return an array containing the age
+        of persons that are over
+        18
+
+        (
+        18
+        included
+        )
+        .
+
+        <br>Note: Also, in the output array, the age should be in the same order as in the input array. You have to
+        complete highAge function. No need to take any input.
+      </p>
+
+      <h3>Input Format</h3>
+      <p>The first line of the input contains an integer
+        N
+        , denoting the number of person in your locality. <br>
+        The second line of the input contains
+        N
+        space-separated integers, denoting the age of persons in your locality.</p>
+
+      <h3>Output Format</h3>
+      <p>Return the array containing the age of persons that are over
+        18
+
+        (
+        18
+        included
+        )
+        .
+      </p>
+
+      <h3>Example</h3>
+      <p>Sample Input<br>
+        6 <br>
+        11 23 3 45 72 68<br>
+
+        Sample Output<br>
+        23 45 72 68 </p>
+      <div>
+        <h3>Ans.</h3>
+        <pre>
+          const highAge = (N, Arr) => 
+          {
+              a = [];
+              for(i = 0; i < N; i++){
+                if(Arr[i] >= 18){
+                  a.push(Arr[i]);
+                }
+              }
+              return a;
+          };       
             </pre>
-        </div>
-        <h3>Question 7: Increment the Array Elements?</h3>
-        <div>
-            <h3>Ans.</h3>
-            <pre>
-                const Inc_Arr = (array,N) => 
-                {
-                    let n = "";
-                    for(i = 0 ; i < N; i++){
-                      let a;
-                      a = array[i] + 1;
-                      n = n+a+" ";
-                    }
-                    console.log(n);
-                };
+      </div>
+    </section>
+
+
+    <section>
+      <h3>Question 7: Increment the Array Elements?</h3>
+      <p>You are provided an array of integers and you have to increment all array elements by 1 and then print whole
+        array.
+
+        <br>Note: You have to complete Inc_Arr. No need to take any input.
+      </p>
+
+      <h3>Input Format</h3>
+      <p>The input contains a single number
+        N
+        , then
+        N
+        array elements as input.</p>
+
+      <h3>Output Format</h3>
+      <p>Print the required answer in the function itself.
+      </p>
+
+      <h3>Example</h3>
+      <p>Sample Input<br>
+        5 <br>
+        1 2 3 4 5<br>
+
+        Sample Output<br>
+        2 3 4 5 6</p>
+      <div>
+        <h3>Ans.</h3>
+        <pre>
+          const Inc_Arr = (array,N) => 
+          {
+              let n = "";
+              for(i = 0 ; i < N; i++){
+                let a;
+                a = array[i] + 1;
+                n = n+a+" ";
+              }
+              console.log(n);
+          };       
             </pre>
-        </div>
-        <h3>Question 8: Pass or Fail?</h3>
-        <div>
-            <h3>Ans.</h3>
-            <pre>
-                const isAllPass = (N, Arr) => 
-                {
-                    let result = 1;
-                    for(let i = 0; i < N; i++){
-                      if(Arr[i] < 32){
-                        result = 0;
-                      }
+      </div>
+    </section>
+
+
+
+    <section>
+      <h3>Question 8: Pass or Fail?</h3>
+      <p>You are given an array
+        A
+        containing the maths marks of students in your class, and your task is to determine if all the students pass in
+        your class or not. A student is declared pass if his maths marks are greater than or equal to
+        32
+        .
+
+        If all the students pass in your class, return "YES" (without quotes); otherwise, return "NO" (without quotes).
+
+        <br>Note: You have to complete isAllPass function. No need to take any input.
+      </p>
+
+      <h3>Input Format</h3>
+      <p>The first line of the input contains an integer
+        N
+        , denoting the number of students in your class. <br>
+        The second line of the input contains
+        N
+        space-separated integers, denoting the maths marks of students in your class.</p>
+
+      <h3>Output Format</h3>
+      <p>Return "YES" (without quotes) if all the students pass in your class; otherwise, print "NO" (without quotes).
+      </p>
+
+      <h3>Example</h3>
+      <p>Sample Input<br>
+        7 <br>
+        13 89 45 98 67 45 54<br>
+
+        Sample Output<br>
+        NO </p>
+      <div>
+        <h3>Ans.</h3>
+        <pre>
+              const isAllPass = (N, Arr) => 
+              {
+                  let result = 1;
+                  for(let i = 0; i < N; i++){
+                    if(Arr[i] < 32){
+                      result = 0;
                     }
-                    if(result == 1){
-                      return "YES";
-                    }else{
-                      return "NO";
-                    }
-                  };
+                  }
+                  if(result == 1){
+                    return "YES";
+                  }else{
+                    return "NO";
+                  }
+              };     
             </pre>
-        </div>
-        <h3>Question 9: Unique Color Shirt?</h3>
-        <div>
-            <h3>Ans.</h3>
-            <pre>
-                function Unique_Shirts(arr, N) {
-                    let uniqueElement = 0;
-                    for (let i = 0; i < N; i++) {
-                        let count = 0, key = arr[i]; //count & key will initialize 
-                        // with 0 and i value  when loop will repeat. 
-        
-                        // we have to use second loop b'cause every time each
-                        // no we have to check with each no which is present in
-                        // the array.
-                        for (let j = 0; j < N; j++) {     // 0 to 5 (6 times)
-                            if (key == arr[j]) //it'll match number and if matches
-                            {
-                                count++;     //count will increases by one;
-                            }
+      </div>
+    </section>
+
+
+    <section>
+      <h3>Question 9: Unique Color Shirt?</h3>
+      <p>Prepbuddy is very tasteful of clothes.
+        He has
+        N
+        numbers of shirts hanging in the hanger in his wardrobe.
+        Prepbuddy likes to wear different colored clothes. So, whenever he see there are two or more shirts with the
+        same color, he removes all the shirt of that color from his wardrobe. Now, he wants to know how many
+        M
+        unique color shirts are left in the wardrobe. <br>
+        Prepbuddy wants you to find
+        M
+        .
+
+        <br>Note: As there are many shades of a color so consider integers as a color name.
+        i.e, color of shirt is 0,1,2, … , N.
+      </p>
+
+      <h3>Input Format</h3>
+      <p>The first line of the input contains an integer
+        N
+        denoting the number of shirts in the wardrobe.
+        The second line of the input contains
+        N
+        integers
+        C
+        1
+        ,
+        C
+        2
+        ,
+        C
+        3
+        ,
+        C
+        4
+        ,
+        .
+        .
+        .
+        ,
+        C
+        N
+        color of shirts (separated by space).</p>
+
+      <h3>Output Format</h3>
+      <p>Return a single integer
+        M
+        denoting the unique colored shirts left in the wardrobe.
+      </p>
+
+      <h3>Example</h3>
+      <p>Sample Input<br>
+        6 <br>
+        3 2 4 1 2 3<br>
+
+        Sample Output<br>
+        2 <br> <br>
+        Input: C=3, 2, 4, 1, 2, 3 <br>
+        Output: 2 <br><br>
+
+        There are two 2-color shirts, and two 3-color shirts.<br>
+        So, after removing 2-color and 3-color shirts, the remaining shirts are one 4-color shirt and one 1-color shirt
+        i.e, 4, 1.
+        Hence, the output will be 2. </p>
+      <div>
+        <h3>Ans.</h3>
+        <pre>
+              function Unique_Shirts(arr, N) {
+                let uniqueElement = 0;
+                for (let i = 0; i < N; i++) {
+                    let count = 0, key = arr[i]; //count & key will initialize 
+                    // with 0 and i value  when loop will repeat. 
+    
+                    // we have to use second loop b'cause every time each
+                    // no we have to check with each no which is present in
+                    // the array.
+                    for (let j = 0; j < N; j++) {     // 0 to 5 (6 times)
+                        if (key == arr[j]) //it'll match number and if matches
+                        {
+                            count++;     //count will increases by one;
                         }
-                        if (count == 1) {
-                            uniqueElement++;//it'll increase when element is
-                            // available in array only 1 time.
-                        }
                     }
-                    return uniqueElement;
-                }
-            </pre>
-        </div>
-        <h3>Question 10: Min & Max?</h3>
-        <div>
-            <h3>Ans.</h3>
-            <pre>
-                function arrayMin(arr) {
-                    let min = arr[0];
-                    for(let i = 0; i < arr.length; i++){
-                      if(arr[i] < min){
-                        min = arr[i];
-                      }
+                    if (count == 1) {
+                        uniqueElement++;//it'll increase when element is
+                        // available in array only 1 time.
                     }
-                    return min;
                 }
-                  
-                function arrayMax(arr) {
-                   let max = arr[0];
-                   for(let i = 0; i < arr.length; i++){
-                     if(arr[i] > max){
-                       max = arr[i];
-                     }
-                   }
-                   return max;
-                }
+                return uniqueElement;
+            }    
             </pre>
-        </div>
-        <h3>Question 11: Birthday Game</h3>
-        <div>
-            <h3>Ans.</h3>
-            <pre>
-                function Birthday_Game(arr,D ,M) {
-                    let count = 0;
-                    for(let i = 0; i <= arr.length-M; i++){
-                      let sum = 0;
-                      for(let j = 0; j < M; j++){
-                        sum += arr[i+j];
-                      }
-                      if(sum == D){
-                        count++;
-                      }
-                    }
-                    return count;
-                }
+      </div>
+    </section>
+
+    <section>
+      <h3>Question 10: Min & Max?</h3>
+      <p>Congratulations on making up to this question. Let us give you a fairly simple array problem to solve. If you
+        know how to iterate through the array, you will easily be able to solve this.
+        <br> The problem statement is simple- given
+        N
+        elements, find the minimum and maximum numbers among those elements.
+      </p>
+
+      <h3>Input Format</h3>
+      <p>First-line contains
+        N
+        representing the length of the array. <br>
+        The second line contains
+        N
+        space-separated integers.</p>
+
+      <h3>Output Format</h3>
+      <p>Return minimum and maximum elements.
+      </p>
+
+      <h3>Example</h3>
+      <p>Sample Input<br>
+        6 <br>
+        3 1 4 6 2 7<br>
+
+        Sample Output<br>
+        1 7 <br> <br>
+
+        Sample Test Case Explanation <br>
+        In the first test case<br>
+        minimum element =
+        1
+        and<br>
+        maximum element =
+        7<br>
+
+        In the second test case<br>
+        minimum element =
+        0
+        and<br>
+        maximum element =
+        0</p>
+      <div>
+        <h3>Ans.</h3>
+        <pre>
+          function arrayMin(arr) {
+            let min = arr[0];
+            for(let i = 0; i < arr.length; i++){
+              if(arr[i] < min){
+                min = arr[i];
+              }
+            }
+            return min;
+        }
+          
+        function arrayMax(arr) {
+           let max = arr[0];
+           for(let i = 0; i < arr.length; i++){
+             if(arr[i] > max){
+               max = arr[i];
+             }
+           }
+           return max;
+        }      
             </pre>
-        </div>
-    </div>
+      </div>
+    </section>
+
+
+    <section>
+      <h3>Question 11: Birthday Game</h3>
+      <p>Yatharth and Anamika are playing a game. Anamika loves Yatharth very much and she wants to share a chocolate
+        bar with him in which each of the squares consists of an integer represented by
+        A
+        [
+        i
+        ]
+        .
+        <br>
+        She decides to share a contiguous segment of the chocolate bar selected such that the length of the segment
+        matches Yatharth's birth month
+        M
+        and the sum of the integers on the squares is equal to his birthday
+        D
+        .
+        <br>
+        You must determine how many ways she can divide the chocolate.
+      </p>
+
+      <h3>Input Format</h3>
+      <p>1. The first line consists of an integer
+        N
+        which denotes the number of squares in the chocolate bar. <br>
+        2. The second line consists of
+        N
+        space-separated integers
+        A
+        [
+        i
+        ]
+        , consisting of numbers on the chocolate bar squares. <br>
+        3. The third line contains an integer
+        D
+        and
+        M
+        which denotes Yatharth's birthday and his birth month respectively. </p>
+
+      <h3>Output Format</h3>
+      <p>Print an integer denoting the total number of ways that Anamika can partition her chocolate bar to share with
+        Yatharth.
+      </p>
+      <h3>Constraints</h3>
+      <p>1
+        <= N <=90 <br>
+          1
+          <= A [ i ] <=5 <br>
+            1
+            <= D <=31 <br>
+              1
+              <= M <=12</p>
+                <h3>Example</h3>
+                <p>Sample Input<br>
+                  5 <br>
+                  2 2 1 3 2<br>
+                  4 2 <br>
+
+                  Sample Output<br>
+                  2 <br>
+                  <br>
+                <h3>Explanation</h3>
+                Anamika wants to find segments summing to Yatharth's birthday,
+                D
+                =
+                4
+                with a length matching his birth month,
+                M
+                =
+                2
+                . In this case, two segments are meeting her criteria:
+                [
+                2
+                ,
+                2
+                ]
+                and
+                [
+                1
+                ,
+                3
+                ]
+                .
+      </p>
+      <div>
+        <h3>Ans.</h3>
+        <pre>
+          function Birthday_Game(arr,D ,M) {
+            let count = 0;
+            for(let i = 0; i <= arr.length-M; i++){
+              let sum = 0;
+              for(let j = 0; j < M; j++){
+                sum += arr[i+j];
+              }
+              if(sum == D){
+                count++;
+              }
+            }
+            return count;
+        }      
+            </pre>
+      </div>
+    </section>
+
+  </div>
 </body>
 
 </html>

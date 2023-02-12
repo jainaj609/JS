@@ -72,7 +72,7 @@
 
  // Types of Operators 
  // 1. Arthimetic Operators : + , - , /,*,%
- // 2. Comparison Operators : == ,===, > , <, >= , <= ,!=,!== it return boolean value.
+ // 2. Comparision Operators : == ,===, > , <, >= , <= ,!=,!== it return boolean value.
  
 //  console.log(4==4);// true
 //  console.log(4==5);//false
@@ -96,7 +96,7 @@
 // console.log((4>5)&&(5>4));//false
 // console.log((6>5)&&(5>4));//true
 
-// //Logical NOT(!) - If you answer is true it will reverse you answer to false and vice versa done.
+// //Logical NOT(!) - If your answer is true it will reverse your answer to false and vice versa done.
 
 // console.log(!(4>5));//true
 // console.log(!(6>5));//false

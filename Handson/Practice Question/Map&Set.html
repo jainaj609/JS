@@ -83,10 +83,20 @@
         <div>
             <h3>Ans.</h3>
             <pre>
-                let str ="abcadeecfb";
-                let Print_count_of_Variables = (str) =>{
-                    for(let i=0; i< str.length; i++ ){
-                    }
+                let s="abcadeecfb";
+                let map = new Map();
+                
+                for(let i=0; i< s.length; i++){
+                  if(map.has(s[i])){
+                    let previousCount= map.get(s[i]);
+                    map.set(s[i],previousCount+1);
+                  }
+                  else{
+                    map.set(s[i], 1);
+                  }
+                }
+                for(let [ch, freq] of map.entries()){
+                  console.log(ch+"="+freq);
                 }
             </pre>
         </div>

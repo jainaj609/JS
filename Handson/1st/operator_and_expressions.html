@@ -37,6 +37,11 @@
             background-color: white;
             line-height: 2.5em;
         }
+        @media screen and (min-width: 250px) and (max-width: 400px) {
+            pre{
+                overflow:scroll;
+            }
+        }
     </style>
 </head>
 
@@ -82,26 +87,23 @@
 
         <section>
             <h3>Question 2: Find if the conditions are obeyed or not?</h3>
-            <p> You are given two number first as 
+            <p> You are given two number first as
                 A
-                 and second as 
+                and second as
                 B
-                 and check if both conditions (
+                and check if both conditions (
                 A
-                <
-                10
-                 and 
-                A
-                >
-                B
-                ) are satisfied or not with the help of operators.
-                
-                 <br>Note: You have to complete Is_Valid function. No need to take any input. </p>
+                < 10 and A>
+                    B
+                    ) are satisfied or not with the help of operators.
+
+                    <br>Note: You have to complete Is_Valid function. No need to take any input.
+            </p>
 
             <h3>Input Format</h3>
-            <p> The first line contains two integers 
+            <p> The first line contains two integers
                 A
-                 and 
+                and
                 B
                 .</p>
 
@@ -127,80 +129,234 @@
 
         <section>
             <h3>Question 3: Check the conditons?</h3>
+            <p>You are given two numbers
+                A
+                and
+                B
+                . You need to do the following checks: <br>
+
+                1. if both are divisible by 10 console true.<br>
+                2. if both are not divisible by 10 console false.<br>
+                3. if one of them only is divisible by 10 console true.<br>
+                Use operator to do this.
+
+                <br>Note: You have to complete Check function. No need to take any input.
+            </p>
+
+            <h3>Input Format</h3>
+            <p> The first line contains two natural numbers
+                A
+                and
+                B
+                .</p>
+
+            <h3>Output Format</h3>
+            <p> Return the required result.
+            </p>
+
+            <h3>Example</h3>
+            <p>Sample Input<br>
+                12 20<br>
+
+                Sample Output<br>
+                true<br></p>
             <div>
                 <h3>Ans.</h3>
                 <pre>
-            const Check = (A, B) => 
-            {
-            return A%10===0 || B%10==0
-            };        
-        </pre>
+                    const Check = (A, B) => 
+                    {
+                    return A%10===0 || B%10==0;
+                    };        
+                </pre>
             </div>
         </section>
 
         <section>
             <h3>Question 4: Find the first digit of a 4 digit number?</h3>
+            <p>You are provided a four digit number N only. Your task is to print out the first digit of that number.
+
+                <br>Note: You have to complete First_Digit function. No need to take any input.
+            </p>
+
+            <h3>Input Format</h3>
+            <p> The first line contains one four digit natural number
+                N
+                .</p>
+
+            <h3>Output Format</h3>
+            <p> Return the required result.
+            </p>
+
+            <h3>Example</h3>
+            <p>Sample Input<br>
+                4567<br>
+
+                Sample Output<br>
+                4<br></p>
             <div>
                 <h3>Ans.</h3>
                 <pre>
-            const First_Digit = (n) => {
-                return Math.trunc(n/1000);
-            };        
-        </pre>
+                    const First_Digit = (n) => {
+                        return Math.trunc(n/1000);
+                    };       
+                </pre>
             </div>
         </section>
 
         <section>
             <h3>Question 5: Find the last digit of a 4 digit number?</h3>
+            <p>You are provided a four digit number N only. Your task is to print out the last digit of that number.
+                <br>You have to complete Last_Digit function. No need to take any input.
+            </p>
+
+            <h3>Input Format</h3>
+            <p> The first line contains one four digit natural number
+                N
+                .</p>
+
+            <h3>Output Format</h3>
+            <p> Return the required result.
+            </p>
+
+            <h3>Example</h3>
+            <p>Sample Input<br>
+                4567<br>
+
+                Sample Output<br>
+                7<br></p>
             <div>
                 <h3>Ans.</h3>
                 <pre>
-            const Last_Digit = (n) => {
-                return n%10;
-            };    
-        </pre>
+                    const Last_Digit = (n) => {
+                        return n%10;
+                    };        
+                </pre>
             </div>
         </section>
 
         <section>
             <h3>Question 6: Find the remainder?</h3>
+            <p>You are provided with two numbers
+                A
+                and
+                B
+                where
+                A
+                as divisor and
+                B
+                as dividend.Your task is find the remainder.
+                <br>Note: You have to complete Find_the_remainder function. No need to take any input.
+            </p>
+
+            <h3>Input Format</h3>
+            <p> The first line of the input contains two integers
+                A
+                and
+                B
+                .</p>
+
+            <h3>Output Format</h3>
+            <p> Return the result after finding the remainder.
+            </p>
+
+            <h3>Example</h3>
+            <p>Sample Input<br>
+                2 9<br>
+
+                Sample Output<br>
+                1<br></p>
             <div>
                 <h3>Ans.</h3>
                 <pre>
-            const Find_the_remainder = (a,b) => {
-                return b%a;
-            };               
-        </pre>
+                    const Find_the_remainder = (a,b) => {
+                        return b%a;
+                    };       
+                </pre>
             </div>
         </section>
 
         <section>
             <h3>Question 7: Multipy two Numbers?</h3>
+            <p>You are provided with two numbers
+                A
+                and
+                B
+                . Your task is to multiply these two numbers.
+                <br>Note: You have to complete Multiply_two_number function. No need to take any input.
+            </p>
+
+            <h3>Input Format</h3>
+            <p> The first line of the input contains two integers
+                A
+                and
+                B
+                .</p>
+
+            <h3>Output Format</h3>
+            <p> Return the result after multiplying two numbers.
+            </p>
+
+            <h3>Example</h3>
+            <p>Sample Input<br>
+                2 5<br>
+
+                Sample Output<br>
+                10<br></p>
             <div>
                 <h3>Ans.</h3>
                 <pre>
-            const Find_the_remainder = (a,b) => {
-                return a*b;
-            };               
-        </pre>
+                    const Multiply_two_number = (a,b) => {
+                        return a*b;
+                    };      
+                </pre>
             </div>
         </section>
 
         <section>
             <h3>Question 8: Marks Calculator?</h3>
+            <p>Shyam has got his marks in three subjects as
+                A
+                ,
+                B
+                , and
+                C
+                (out of 100).Write a program to calculate his total marks and his average.
+                <br>Note: You have to complete Sum and Average functions. No need to take any input.
+            </p>
+
+            <h3>Input Format</h3>
+            <p> The input contains three numbers
+                A
+                ,
+                B
+                and
+                C
+                ..</p>
+
+            <h3>Output Format</h3>
+            <p> Return the required result.
+            </p>
+
+            <h3>Example</h3>
+            <p>Sample Input<br>
+                50 20 100<br>
+
+                Sample Output<br>
+                170 <br>
+                56.67<br></p>
             <div>
                 <h3>Ans.</h3>
                 <pre>
-            const Sum = (A, B, C) => 
-            {
-                return A+B+C;
-            };
-
-            const Average = (A, B, C) => 
-            {
-                return ((A+B+C)/3);
-            };              
-        </pre>
+                    const Sum = (A, B, C) => 
+                    {
+                        return A+B+C;
+                    };
+        
+                    const Average = (A, B, C) => 
+                    {
+                        return ((A+B+C)/3);
+                    };      
+                </pre>
             </div>
         </section>
     </div>

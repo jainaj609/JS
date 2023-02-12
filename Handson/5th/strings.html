@@ -699,19 +699,16 @@
                 <pre>
                     var Split_the_string = (S) => 
                     { 
-                      let res ="";
-                      let j = 0;
+                      let res =[], j=0;
                       let string = "";
-                      for (let i = 0; i <= s.length; i++) {
-                        if (s[i] == " " || s[i] == undefined) {
-                          res += string;
-                          if (s[i] != undefined)
-                            res += "\n";
+                      for (let i = 0; i <= S.length; i++) {
+                        if (S[i] == " " || S[i] == undefined) {
+                          res[j] = string;
                           string = "";
                           j++;
                         }
                         else
-                          string += s[i];
+                          string += S[i];
                       }
                       return res;
                     };      

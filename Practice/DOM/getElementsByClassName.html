@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>India</h1>
+    <p class="india" id="hitman">Rohit</p>
+    <p class="india" id="Jr360">SuryaKumar Yadav</p>
+    <h1>Australia</h1>
+    <p class="australia">David Warner</p>
+    <p class="australia">Pointing</p>
+    
+    <button onclick="changeColor()">Color Change</button>
+</body>
+</html>
+
+<script>
+    function changeColor(){
+        console.log("Change color is Executed");
+
+        let indianPlayers = document.getElementsByClassName("india");
+
+        for(let i=0; i<indianPlayers.length; i++){
+            
+            indianPlayers[i].style.color = "blue";
+        }
+    }
+</script>

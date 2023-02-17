@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//db.onlinewebfonts.com/c/7d0b7aa2cf241eac7fd80458b5fa15e2?family=Bauhaus+Hv+BT" rel="stylesheet"
+        type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="parent">
+        <div><img src="./Images/clock_logo/clock_logo.png" class="clock_logo" alt="clock_logo"></div>
+        <div class="set_timing">
+            <div class="boxes">
+                <div class="box box1">
+                    <img src="./Images/wake_up/wake_up.png" alt="">
+                    <label for="one" class="one">Set wake up time</label>
+
+                    <div class="select-box">
+                        <div class="options-container">
+                            <div class="option">
+                                <input type="radio" class="radio" name="wakeup" id="zero" value="0">
+                                <label for="zero">12 AM - 1 AM</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="wakeup" id="one" value="1">
+                                <label for="one">1 AM - 2 AM</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="wakeup" id="two" value="2">
+                                <label for="two">2 AM - 3 AM</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="wakeup" id="three" value="3">
+                                <label for="three">3 AM - 4 AM</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="wakeup" id="four" value="4">
+                                <label for="four">4 AM - 5 AM</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="wakeup" id="five" value="5">
+                                <label for="five">5 AM - 6 AM</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="wakeup" id="six" value="6">
+                                <label for="six">6 AM - 7 AM</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="wakeup" id="seven" value="7">
+                                <label for="seven">7 AM - 8 AM</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="wakeup" id="eight" value="8">
+                                <label for="eight">8 AM - 9 AM</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="wakeup" id="nine" value="9">
+                                <label for="nine">9 AM - 10 AM</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="wakeup" id="ten" value="10">
+                                <label for="ten">10 AM - 11 AM</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="wakeup" id="eleven" value="12">
+                                <label for="eleven">11 AM - 12 PM</label>
+                            </div>
+
+                            <div class="option">
+                                <input type="radio" class="radio" name="wakeup" id="twelve" value="13">
+                                <label for="twelve">12 PM - 1 PM</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="wakeup" id="thirteen" value="14">
+                                <label for="thirteen">1 PM - 2 PM</label>
+
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="wakeup" id="fourteen" value="15">
+                                <label for="fourteen">2 PM - 3 PM</label>
+
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="wakeup" id="fifteen" value="16">
+                                <label for="fifteen">3 PM - 4 PM</label>
+
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="wakeup" id="sixteen" value="17">
+                                <label for="sixteen">4 PM - 5 PM</label>
+
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="wakeup" id="eighteen" value="18">
+                                <label for="eighteen">5 PM - 6 PM</label>
+
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="wakeup" id="nineteen" value="19">
+                                <label for="nineteen">6 PM - 7 PM</label>
+
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="wakeup" id="twenty" value="20">
+                                <label for="twenty">7 PM - 8 PM</label>
+
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="wakeup" id="twentyone" value="21">
+                                <label for="twentyone">8 PM - 9 PM</label>
+
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="wakeup" id="twentytwo" value="22">
+                                <label for="twentytwo">9 PM - 10 PM</label>
+
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="wakeup" id="twentythree" value="23">
+                                <label for="twentythree">10 PM - 11 PM</label>
+
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="wakeup" id="twentyfour" value="24">
+                                <label for="twentyfour">11 PM - 12 PM</label>
+                            </div>
+
+                        </div>
+
+                        <div class="selected" id="one">
+                            10 AM - 11 AM
+                        </div>
+                    </div>
+
+                </div>
+                <div class="line"></div>
+                <div class="box box2">
+                    <img src="./Images/lunch_time/lunch_time.png" alt="">
+                    <label for="one" class="one">Set lunch time</label>
+                    <div class="select-box">
+                        <div class="options-container">
+                            <div class="option">
+                                <input type="radio" class="radio" name="lunch" id="zero" value="0">
+                                <label for="zero">12 AM - 1 AM</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="lunch" id="one" value="1">
+                                <label for="one">1 AM - 2 AM</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="lunch" id="two" value="2">
+                                <label for="two">2 AM - 3 AM</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="lunch" id="three" value="3">
+                                <label for="three">3 AM - 4 AM</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="lunch" id="four" value="4">
+                                <label for="four">4 AM - 5 AM</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="lunch" id="five" value="5">
+                                <label for="five">5 AM - 6 AM</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="lunch" id="six" value="6">
+                                <label for="six">6 AM - 7 AM</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="lunch" id="seven" value="7">
+                                <label for="seven">7 AM - 8 AM</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="lunch" id="eight" value="8">
+                                <label for="eight">8 AM - 9 AM</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="lunch" id="nine" value="9">
+                                <label for="nine">9 AM - 10 AM</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="lunch" id="ten" value="10">
+                                <label for="ten">10 AM - 11 AM</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="lunch" id="eleven" value="12">
+                                <label for="eleven">11 AM - 12 PM</label>
+                            </div>
+
+                            <div class="option">
+                                <input type="radio" class="radio" name="lunch" id="twelve" value="13">
+                                <label for="twelve">12 PM - 1 PM</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="lunch" id="thirteen" value="14">
+                                <label for="thirteen">1 PM - 2 PM</label>
+
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="lunch" id="fourteen" value="15">
+                                <label for="fourteen">2 PM - 3 PM</label>
+
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="lunch" id="fifteen" value="16">
+                                <label for="fifteen">3 PM - 4 PM</label>
+
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="lunch" id="sixteen" value="17">
+                                <label for="sixteen">4 PM - 5 PM</label>
+
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="lunch" id="eighteen" value="18">
+                                <label for="eighteen">5 PM - 6 PM</label>
+
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="lunch" id="nineteen" value="19">
+                                <label for="nineteen">6 PM - 7 PM</label>
+
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="lunch" id="twenty" value="20">
+                                <label for="twenty">7 PM - 8 PM</label>
+
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="lunch" id="twentyone" value="21">
+                                <label for="twentyone">8 PM - 9 PM</label>
+
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="lunch" id="twentytwo" value="22">
+                                <label for="twentytwo">9 PM - 10 PM</label>
+
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="lunch" id="twentythree" value="23">
+                                <label for="twentythree">10 PM - 11 PM</label>
+
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="lunch" id="twentyfour" value="24">
+                                <label for="twentyfour">11 PM - 12 PM</label>
+                            </div>
+
+                        </div>
+                        <div class="selected" id="two">
+                            12 PM - 1 PM
+                        </div>
+                    </div>
+
+                </div>
+                <div class="line"></div>
+
+                <div class="box box3">
+                    <img src="./Images/nap_time/nap_time.png" alt="">
+                    <label for="one" class="one">Set nap time</label>
+                    <div class="select-box">
+                        <div class="options-container">
+                            <div class="option">
+                                <input type="radio" class="radio" name="nap" id="zero" value="0">
+                                <label for="zero">12 AM - 1 AM</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="nap" id="one" value="1">
+                                <label for="one">1 AM - 2 AM</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="nap" id="two" value="2">
+                                <label for="two">2 AM - 3 AM</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="nap" id="three" value="3">
+                                <label for="three">3 AM - 4 AM</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="nap" id="four" value="4">
+                                <label for="four">4 AM - 5 AM</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="nap" id="five" value="5">
+                                <label for="five">5 AM - 6 AM</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="nap" id="six" value="6">
+                                <label for="six">6 AM - 7 AM</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="nap" id="seven" value="7">
+                                <label for="seven">7 AM - 8 AM</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="nap" id="eight" value="8">
+                                <label for="eight">8 AM - 9 AM</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="nap" id="nine" value="9">
+                                <label for="nine">9 AM - 10 AM</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="nap" id="ten" value="10">
+                                <label for="ten">10 AM - 11 AM</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="nap" id="eleven" value="12">
+                                <label for="eleven">11 AM - 12 PM</label>
+                            </div>
+
+                            <div class="option">
+                                <input type="radio" class="radio" name="nap" id="twelve" value="13">
+                                <label for="twelve">12 PM - 1 PM</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="nap" id="thirteen" value="14">
+                                <label for="thirteen">1 PM - 2 PM</label>
+
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="nap" id="fourteen" value="15">
+                                <label for="fourteen">2 PM - 3 PM</label>
+
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="nap" id="fifteen" value="16">
+                                <label for="fifteen">3 PM - 4 PM</label>
+
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="nap" id="sixteen" value="17">
+                                <label for="sixteen">4 PM - 5 PM</label>
+
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="nap" id="eighteen" value="18">
+                                <label for="eighteen">5 PM - 6 PM</label>
+
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="nap" id="nineteen" value="19">
+                                <label for="nineteen">6 PM - 7 PM</label>
+
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="nap" id="twenty" value="20">
+                                <label for="twenty">7 PM - 8 PM</label>
+
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="nap" id="twentyone" value="21">
+                                <label for="twentyone">8 PM - 9 PM</label>
+
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="nap" id="twentytwo" value="22">
+                                <label for="twentytwo">9 PM - 10 PM</label>
+
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="nap" id="twentythree" value="23">
+                                <label for="twentythree">10 PM - 11 PM</label>
+
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="nap" id="twentyfour" value="24">
+                                <label for="twentyfour">11 PM - 12 PM</label>
+                            </div>
+
+                        </div>
+                        <div class="selected" id="three">
+                            4 PM - 5 PM
+                        </div>
+                    </div>
+                </div>
+                <div class="line"></div>
+
+                <div class="box box4">
+                    <!-- <img src="./Images/167-1673700_crescent-moon-svg-clip-arts-blue-crescent-png.png" width="40px" alt=""> -->
+
+
+                    <i class="fa-sharp fa-solid fa-moon"></i>
+
+                    <label for="one" class="one">Set night time</label>
+                    <div class="select-box">
+                        <div class="options-container">
+                            <div class="option">
+                                <input type="radio" class="radio" name="night" id="zero" value="0">
+                                <label for="zero">12 AM - 1 AM</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="night" id="one" value="1">
+                                <label for="one">1 AM - 2 AM</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="night" id="two" value="2">
+                                <label for="two">2 AM - 3 AM</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="night" id="three" value="3">
+                                <label for="three">3 AM - 4 AM</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="night" id="four" value="4">
+                                <label for="four">4 AM - 5 AM</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="night" id="five" value="5">
+                                <label for="five">5 AM - 6 AM</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="night" id="six" value="6">
+                                <label for="six">6 AM - 7 AM</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="night" id="seven" value="7">
+                                <label for="seven">7 AM - 8 AM</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="night" id="eight" value="8">
+                                <label for="eight">8 AM - 9 AM</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="night" id="nine" value="9">
+                                <label for="nine">9 AM - 10 AM</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="night" id="ten" value="10">
+                                <label for="ten">10 AM - 11 AM</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="night" id="eleven" value="12">
+                                <label for="eleven">11 AM - 12 PM</label>
+                            </div>
+
+                            <div class="option">
+                                <input type="radio" class="radio" name="night" id="twelve" value="13">
+                                <label for="twelve">12 PM - 1 PM</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="night" id="thirteen" value="14">
+                                <label for="thirteen">1 PM - 2 PM</label>
+
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="night" id="fourteen" value="15">
+                                <label for="fourteen">2 PM - 3 PM</label>
+
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="night" id="fifteen" value="16">
+                                <label for="fifteen">3 PM - 4 PM</label>
+
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="night" id="sixteen" value="17">
+                                <label for="sixteen">4 PM - 5 PM</label>
+
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="night" id="eighteen" value="18">
+                                <label for="eighteen">5 PM - 6 PM</label>
+
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="night" id="nineteen" value="19">
+                                <label for="nineteen">6 PM - 7 PM</label>
+
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="night" id="twenty" value="20">
+                                <label for="twenty">7 PM - 8 PM</label>
+
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="night" id="twentyone" value="21">
+                                <label for="twentyone">8 PM - 9 PM</label>
+
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="night" id="twentytwo" value="22">
+                                <label for="twentytwo">9 PM - 10 PM</label>
+
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="night" id="twentythree" value="23">
+                                <label for="twentythree">10 PM - 11 PM</label>
+
+                            </div>
+                            <div class="option">
+                                <input type="radio" class="radio" name="night" id="twentyfour" value="24">
+                                <label for="twentyfour">11 PM - 12 PM</label>
+                            </div>
+
+                        </div>
+                        <div class="selected" id="four">
+                            4 PM - 5 PM
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="submit" id="button">Set Alarm</button>
+        <div class="set_msgbox"></div>
+
+        <p class="set_msg" id="set_msg">GOOD MORNING!! WAKE UP !!</p>
+
+        <div class="popup2">Time will be updated here after clicking on "Set Alarm"</div>
+        <div class="time_declaration">
+        </div>
+        <p class="declaration_text">
+            Wake Up Time: <span class="wakeupTime">10AM - 11AM</span> <br>
+            Lunch Time: <span class="lunchTime">12PM - 1PM</span> <br>
+            Nap Time: <span class="napTime">4PM - 5PM</span> <br>
+            Night Time: <span class="nightTime">8PM - 9PM</span>
+        </p>
+        <div class="popup1"> The message and image will change according to the time</div>
+        <div class="digital_clock">
+            <div class="clock_box">
+                <p class="time_text">Time</p>
+                <div class="hms_flex">
+                    <div class="hms">
+                        <p class="no hour">10</p>
+                        <p class="hms_text">hours</p>
+                    </div>
+                    <p class="colon">:</p>
+                    <div class="hms mins">
+                        <p class="no min">00</p>
+                        <p class="hms_text">mins</p>
+                    </div>
+                    <p class="colon">:</p>
+                    <div class="hms">
+                        <p class="no sec">01</p>
+                        <p class="hms_text">secs</p>
+                    </div>
+                </div>
+                <div class="am_pm">
+                    <p>AM</p>
+                </div>
+            </div>
+        </div>
+        <div class="digital_clock1"></div>
+        <div class="digital_clock2"></div>
+        <div class="set_msg2">GRAB SOME HEALTHY BREAKFAST!!!</div>
+        <div class="img1"></div>
+    </div>
+    <script src="./JS/digitalclock.js"></script>
+
+</body>
+
+</html>

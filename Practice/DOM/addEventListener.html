@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>India</h1>
+    <p class="india" id="hitman">Rohit</p>
+    <p class="india" id="Jr360">SuryaKumar Yadav</p>
+    <h1>Australia</h1>
+    <p class="australia">David Warner</p>
+    <p class="australia">Pointing</p>
+    
+    <button id="button">Color Change</button>
+</body>
+</html>
+
+<script>
+    document.querySelector('#button').addEventListener("click",changeColor);
+
+    function changeColor(){
+        console.log("Change color is Executed");
+
+        let australianPlayers = document.querySelectorAll(".australia");
+        australianPlayers[0].style.backgroundColor ="blue";
+
+        let indianPlayers = document.querySelectorAll(".india");
+        indianPlayers[0].style.backgroundColor = "blue";
+    }
+</script>

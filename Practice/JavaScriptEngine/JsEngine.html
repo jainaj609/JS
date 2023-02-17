@@ -1,0 +1,60 @@
+// console.log("Hello");
+
+//JS Engine - It basically is responsible for converting the human understandable language (code in any language) into machine level code(consists of 0's and 1's).
+// Its a program which is been written in C++. 
+// the famous JS engines are - V8(Chrome)
+//                           - SpiderMonkey(Mozilla Firefox)
+//                           - Chakra(Internet Explorer/Microsoft Edge)
+// 
+
+// const a = 3;
+// const b = 6;
+// function add(num1,num2){//parameter num1=6, num2=7
+//     let result = num1 + num2;//result = 13
+//     return result;// return 13
+// }
+// let finalResult = add(6,7);//argument
+
+// Execution Context - Its the behavior of the execution of the code. Break through of the code that is being followed
+
+// Global Execution COntext - This is the first thing that get created and runs
+// Functional Execution COntext
+
+// Each of these contexts have two stages
+// 1. Creation Phase - Variables are assigned memories and they are declared with default values as undefined. These are for the variables. For functions, the entire fn definition is assigned to the name of the function.
+
+// 1. Execution Phase - The default value undefined is replaced with its true values. And the function call leads us to the functional execution context. 
+
+//Hoisting - It basically is the phenomenon where the declaration of the variables is brought to the top of the code. Its done only for var keywords and the functions(not arrow functions).
+
+// Temporal Dead Zone(TDZ) - For variables declared with let and const keywords, are stored in TDZ, they are not accessible as long as they are not initialized with the true values. 
+
+// console.log(x);
+// console.log(y);
+console.log(z);
+
+var z = 2;
+console.log(z);
+// let x;
+
+
+
+// x = 5;
+const y = 6;
+console.log(y);
+// console.log(x);
+
+add(3,4);
+
+function add(num1,num2){//parameter num1=6, num2=7
+    let result = num1 + num2;//result = 13
+    console.log(result);// return 13
+}
+
+// const add = (num1, num2) => {
+//     let result = num1 + num2;//result = 13
+//     console.log(result);// return 13
+// }
+
+const space = " ";
+console.log(space);

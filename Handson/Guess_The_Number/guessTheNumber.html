@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="guessno.css">
+</head>
+
+<body>
+    <div class="top">
+        <button type="button" id="playAgain">Play Again</button>
+        <p class="limit">(Between 1 and 100)</p>
+    </div>
+
+    <h1>Guess My Number!</h1>
+
+    <div class="middleLine">
+        <div class="hrline"></div>
+        <div class="box">
+            <p class="no">?</p>
+        </div>
+    </div>
+
+    <div class="boxes">
+        <div class="left">
+            <div><input type="number" id="guessno"></div>
+            <button type="button" id="check" onclick="CheckValue()">Check!</button>
+        </div>
+        <div class="right">
+            <h1 class="guess_msg">Start guessing...</h1>
+            <div class="gap">
+                <p>💯 Chances: <span id="chances"></span></p>
+                <p>🏆 HighScore: <span id="highScore">0</span></p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    let initialvalue = 100;
+    function generate_Random_No(max) {
+        return Math.floor((Math.random() * 100) + 1);
+    }
+    let random = generate_Random_No(100);
+    let chances = document.getElementById("chances");
+    chances.innerText = initialvalue;
+
+    function CheckValue() {
+        console.log(random);
+        let current_no = document.getElementById("guessno").value;
+
+        let guess_msg = document.querySelector('.guess_msg');
+
+
+        if (current_no > random) {
+            
+            guess_msg.textContent = "Your Guess is too High";
+            initialvalue--;
+            chances.innerText = initialvalue;
+        }
+        else if (current_no < random) {
+            guess_msg.innerText = "Your Guess is too Low";
+            initialvalue--;
+            chances.innerText = initialvalue;
+        }
+        else{
+            guess_msg.innerText = "🤩🤩 Hurray You Won 🤩🤩";
+            initialvalue--;
+            chances.innerText = initialvalue;
+
+            let highScore = document.getElementById("highScore");
+            highScore.innerText = initialvalue;
+
+            document.getElementsByClassName("no")[0].innerText=current_no;
+
+            document.body.style.background="green";
+        }
+    }
+</script>

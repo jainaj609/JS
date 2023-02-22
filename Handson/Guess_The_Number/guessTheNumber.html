@@ -11,7 +11,7 @@
 
 <body>
     <div class="top">
-        <button type="button" id="playAgain">Play Again</button>
+        <button id="playAgain" onclick="playAgain()">Play Again</button>
         <p class="limit">(Between 1 and 100)</p>
     </div>
 
@@ -59,7 +59,7 @@
 
 
         if (current_no > random) {
-            
+
             guess_msg.textContent = "Your Guess is too High";
             initialvalue--;
             chances.innerText = initialvalue;
@@ -69,7 +69,7 @@
             initialvalue--;
             chances.innerText = initialvalue;
         }
-        else{
+        else {
             guess_msg.innerText = "🤩🤩 Hurray You Won 🤩🤩";
             initialvalue--;
             chances.innerText = initialvalue;
@@ -77,9 +77,20 @@
             let highScore = document.getElementById("highScore");
             highScore.innerText = initialvalue;
 
-            document.getElementsByClassName("no")[0].innerText=current_no;
-
-            document.body.style.background="green";
+            document.getElementsByClassName("no")[0].innerText = current_no;
+            document.getElementById("check").style.display = "none";
+            document.body.style.background = "green";
         }
+    }
+
+
+    function playAgain() {
+        document.getElementById("playAgain")
+        document.getElementById("guessno").value = "";
+        let guess_msg = document.querySelector('.guess_msg');
+        guess_msg.innerText = "Start guessing...";
+        chances.innerText =100;
+        document.getElementsByClassName("no")[0].innerText="?";
+        document.getElementById("highScore").innerText = 0;
     }
 </script>

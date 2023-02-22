@@ -45,7 +45,7 @@
 <script>
     let initialvalue = 100;
     function generate_Random_No(max) {
-        return Math.floor((Math.random() * 100) + 1);
+        return Math.floor((Math.random() * max) + 1);
     }
     let random = generate_Random_No(100);
     let chances = document.getElementById("chances");
@@ -56,7 +56,6 @@
         let current_no = document.getElementById("guessno").value;
 
         let guess_msg = document.querySelector('.guess_msg');
-
 
         if (current_no > random) {
 
@@ -90,7 +89,10 @@
         let guess_msg = document.querySelector('.guess_msg');
         guess_msg.innerText = "Start guessing...";
         chances.innerText =100;
+        initialvalue=100;
         document.getElementsByClassName("no")[0].innerText="?";
         document.getElementById("highScore").innerText = 0;
+        document.getElementById("check").style.display = "block";
+        document.body.style.background = "rgb(46, 13, 13)";
     }
 </script>

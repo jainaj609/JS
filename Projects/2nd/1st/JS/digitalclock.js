@@ -97,8 +97,6 @@ function changeTextImage() {
     console.log(value3);
     console.log(value4);
 
-    // for (let i = 0; i < 2; i++) {
-// console.log(value1);
 console.log(hours);
         if (parseInt(value1) === hours) {
             textToChange.innerText = "GRAB SOME HEALTHY BREAKFAST!!!";
@@ -125,14 +123,14 @@ console.log(hours);
             imageToChange.style.cssText = "background-image: url('./Images/Component 32 – 1/Component 32 – 1.png')";
             document.querySelector("div.popup2").style.display = "none";
         }
-
+        document.querySelector("span.wakeupTime").innerText = selected[0].innerText;
+        document.querySelector("span.lunchTime").innerText = selected[1].innerText;
+        document.querySelector("span.napTime").innerText = selected[2].innerText;
+        document.querySelector("span.nightTime").innerText = selected[3].innerText;
     }
 
-    document.querySelector("span.wakeupTime").innerText = selected[0].innerText;
-    document.querySelector("span.lunchTime").innerText = selected[1].innerText;
-    document.querySelector("span.napTime").innerText = selected[2].innerText;
-    document.querySelector("span.nightTime").innerText = selected[3].innerText;
-// }
+    
+
 
 
 

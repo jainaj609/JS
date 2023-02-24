@@ -97,8 +97,9 @@ function changeTextImage() {
     console.log(value3);
     console.log(value4);
 
-    for (let i = 0; i < 2; i++) {
-
+    // for (let i = 0; i < 2; i++) {
+// console.log(value1);
+console.log(hours);
         if (parseInt(value1) === hours) {
             textToChange.innerText = "GRAB SOME HEALTHY BREAKFAST!!!";
             textToChange.style.cssText = "padding: 35px;";
@@ -131,7 +132,7 @@ function changeTextImage() {
     document.querySelector("span.lunchTime").innerText = selected[1].innerText;
     document.querySelector("span.napTime").innerText = selected[2].innerText;
     document.querySelector("span.nightTime").innerText = selected[3].innerText;
-}
+// }
 
 
 

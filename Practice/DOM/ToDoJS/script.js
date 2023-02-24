@@ -17,6 +17,7 @@ function createCard() {
     document.getElementsByClassName("listForm")[0].style.display = "none";
 
     let title = document.createElement("h4");
+    title.cssText=""
     title.innerText = document.getElementById("listName").value;// read the value from the form
 
     let icon = document.createElement("i");

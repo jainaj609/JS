@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@100&display=swap');
+
+body {
+    background-color: rgb(35, 34, 47);
+    color: white;
+}
+
+
+.container {
+    width: 85vw;
+    height: max-content;
+    /* border: 1px solid white; */
+    margin: auto;
+}
+
+header {
+    font-family: sans-serif;
+    width: inherit;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid wheat; */
+
+}
+
+.list {
+    font-weight: 100;
+}
+
+.tasklist_text {
+    font-size: 3em;
+    font-weight: 900;
+}
+
+.additem_text {
+    font-family: 'Albert Sans', sans-serif;
+    /* font-family: sans-serif; */
+    font-size: 2.3em;
+    font-weight: 100;
+}
+
+.popup_title {
+    font-family: 'Albert Sans', sans-serif;
+    font-size: x-large;
+    margin-top: 40px;
+}
+
+.createList {
+    width: 197px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon1 {
+    align-self: flex-start;
+    font-size: x-large;
+    background-color: blueviolet;
+    border: 7px solid blueviolet;
+    border-radius: 50%;
+}
+/* div.container :not(#unblurred){
+    filter: blur(2px);    
+
+}
+#unblurred>#box {
+    border:2px solid black; 
+    filter: blur(0px);
+    background-color: rgb(35, 34, 47);
+
+} */
+.opacity {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: inherit;
+    opacity: 0.6;
+    /* background-color: white; */
+    background-color: rgb(35, 34, 47);
+    z-index: 1;
+    display: none;
+}
+
+.listForm {
+    height: 200px;
+    width: 400px;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    background-color: white;
+    color: rgba(137, 43, 226, 0.781);
+    position: absolute;
+    margin: auto;
+    top: -100px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+.listName {
+    height: 35px;
+    width: 250px;
+    margin-top: -100px;
+    border: 2px solid rgba(137, 43, 226, 0.466);
+    border-radius: 6px;
+    outline-offset: -2px;
+    text-align: center;
+}
+
+.listName:focus {
+    outline: 2px solid rgba(137, 43, 226, 0.697);
+
+}
+
+.buttons_inline {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.addList,
+.close {
+    color: white;
+    font-size: larger;
+    font-weight: 200;
+    height: 40px;
+    width: 100px;
+    border-radius: 25px;
+    background-color: rgba(137, 43, 226, 0.824);
+    border: none;
+}
+
+.info_to_empty_text {
+    font-family: 'Albert Sans', sans-serif;
+    font-weight: 100;
+    font-size: xx-large;
+}
+
+.lists {
+    height: max-content;
+    width: 81.8vw;
+    margin: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.lists>div {
+    height: 47vh;
+    width: 200px;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+}
+
+.task_title {
+    margin-top: 30px;
+    margin-bottom: 0px;
+    font-size: large;
+    text-align: center;
+    font-family: 'Albert Sans', sans-serif;
+    font-weight: 100;
+    color: rgba(150, 103, 193, 0.68)
+}
+
+.hrline {
+    color: rgba(0, 0, 0, 0.601);
+}
+
+.icons {
+    position: absolute;
+    display: flex;
+    gap: 20px;
+    bottom: 20px;
+    right: 10px;
+}
+
+.plus_icon,
+.del_icon {
+    color: white;
+    border-radius: 50%;
+}
+
+.plus_icon {
+    font-size: x-large;
+    background-color: rgb(150, 103, 193);
+    border: 8px solid rgb(150, 103, 193);
+}
+
+.del_icon {
+    font-size: larger;
+    background-color: rgba(255, 0, 0, 0.453);
+    border: 10px solid rgba(255, 0, 0, 0.432);
+}

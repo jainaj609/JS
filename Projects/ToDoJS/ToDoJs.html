@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="todojs.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container" id="container">
+        <Header>
+            <p class="tasklist_text">Task <span class="list">List</p>
+            <div id="createList" class="createList">
+                <i class="fa-solid fa-plus icon1"></i>
+                <p class="additem_text">Add Item</p>
+            </div>
+        </Header>
+        <!-- <div id="unblurred"><div id="box">Test Box</div></div> -->
+        <div class="opacity"></div>
+        <p class="info_to_empty_text">No items in the todo list</p>
+        <div id="lists" class="lists">
+            <!-- <div class="child">
+                <p class="task_title">Trip to bhutan</p>
+                <hr class="hrline">
+                <div class="items">
+
+                </div>
+                <div class="icons">
+                    <i class="fa fa-trash del_icon"></i>
+                    <i class="fa-solid fa-plus plus_icon"></i>
+                </div>
+            </div>
+
+            <div class="child">
+                <p class="task_title">Trip to bhutan</p>
+                <hr class="hrline">
+                <div class="items">
+                <div class="icons">
+                    <i class="fa fa-trash del_icon"></i>
+                    <i class="fa-solid fa-plus plus_icon"></i>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+
+    <div class="listForm" style="display: none;">
+        <p class="popup_title">Add New List</p>
+        <form action="">
+            <input type="text" id="listName" class="listName">
+            <div class="buttons_inline">
+                <button class="addList" id="addList" type="button">Add</button>
+                <button class="close" id="close" type="button">Close</button>
+            </div>
+        </form>
+    </div>
+
+
+</body>
+
+</html>
+<script src="script.js"></script>

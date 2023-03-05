@@ -17,17 +17,23 @@ function createCard() {
     document.getElementsByClassName("listForm")[0].style.display = "none";
 
     let title = document.createElement("h4");
-    title.cssText=""
+    // title.cssText="";
     title.innerText = document.getElementById("listName").value;// read the value from the form
 
     let icon = document.createElement("i");
     icon.className = "fa-solid fa-plus";
 
+    let itembox = document.createElement("div");
+
+    icon.addEventListener("click", function(){
+        showtasks(itembox);
+    })
+
     let del = document.createElement("i");
     del.className = "fa fa-trash";
 
     let list = document.createElement("div");
-    list.append(title, del, icon);
+    list.append(title,itembox, del, icon);
 
     del.addEventListener("click", function removeElement() {
         let tempArray = [];
@@ -50,5 +56,23 @@ function createCard() {
             lists.appendChild(n[i]);
         }
     }
+
+}
+function showtasks(box){
+    document.getElementsByClassName("itemForm")[0].style.display = "block";
+
+    document.querySelector('#itemList').addEventListener("click", function(){
+        console.log("Add Button is pressed");
+        let tag = document.createElement("li");
+        tag.innerText = document.querySelector("#itemName").value;
+        box+=box.appendChild(tag);
+        document.getElementsByClassName("itemForm")[0].style.display = "none";
+        document.querySelector(".itemForm").removeEventListener("click",showtasks);
+    })
+
+    document.querySelector("#exit").addEventListener("click",function(){
+        console.log("Close Button is pressed");
+        document.getElementsByClassName("itemForm")[0].style.display = "none";
+    })
 
 }

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise Async Await</title>
+    <style>
+        .parent {
+            width: 80vw;
+            margin: auto;
+        }
+
+        h1 {
+            margin: 1em auto;
+            font-size: 3em;
+        }
+
+        h1,
+        h3 {
+            color: darkslateblue;
+        }
+
+        .parent div {
+            width: inherit;
+            height: max-content;
+            background-color: rgba(71, 61, 139, 0.493);
+            border: 1px solid darkslateblue;
+        }
+
+        pre {
+            box-sizing: border-box;
+            width: 100%;
+            border-left: 5px solid darkslateblue;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: white;
+            line-height: 2.5em;
+        }
+
+        .answer {
+            color: darkslateblue;
+            font-weight: 100;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <h1>Promise Async Await</h1>
+        <h3>Question 1: Write one example explaining how you can write a callback function ?</h3>
+        <div>
+            <h3>Ans.</h3>
+            <pre>
+                function callback() {
+                    console.log("CallBack Function");
+                }
+                function myFun(callbackFunc) {
+                    callbackFunc();
+                }
+                myFun(callback);       
+            </pre>
+        </div>
+
+        <h3>Question 2: Write callback function to print numbers from 1 to 7, in which 1 should be printed after 1 sec ,
+            2 should be printed after 2 sec, 3 should be printed after 3 sec and so on.
+            <br><br>
+            Explain callback hell. <br>
+            Numbers<br>
+            1<br>
+            2<br>
+            3<br>
+            4<br>
+            5<br>
+            6<br>
+            7
+        </h3>
+       
+        <div>
+            <h3>Ans.</h3>
+            <pre>
+                function PrintNum(n) {
+                    for (let i = 1; i <= n; i++) {
+                        setTimeout(() => {
+                            console.log(i);
+                        },i* 1000)
+                    }
+                }
+                PrintNum(7);
+            </pre>
+        </div>
+
+        <h3>Question 3: Write promise function to print numbers from 1 to 7, in which 1 should be printed after 1 sec , 2 should be printed after 2 sec, 3 should be printed after 3 sec and so on. 
+            <br><br>
+            Numbers <br>
+            1 <br>
+            2<br>
+            3<br>
+            4<br>
+            5<br>
+            6<br>
+            7</h3>
+       
+        <div>
+            <h3>Ans.</h3>
+            <pre>
+                function print(num) {
+                    return new Promise((resolve) => {
+                        setTimeout(() => {
+                            console.log(num);
+                            resolve()
+                        }, 1000)
+                    })
+                }
+                let demo = Promise.resolve();
+                for (let i = 1; i <= 7; i++) {
+                    demo = demo.then(() => print(i));
+                }
+            </pre>
+        </div>
+
+        <h3>Question 4: Create a promise function accepting a argument, if yes is passed to the function then it should go to resolved state and print Promise Resolved, and if nothing is passed then it should go to reject state and catch the error and print Promise Rejected.</h3>
+        <div>
+            <h3>Ans.</h3>
+            <pre>
+                function print(a){
+                    return new Promise(function (resolve, reject){
+                     if(a==="yes"){
+                      resolve("Promise is Resolved");
+                     }
+                     else{
+                     reject("Promise is Rejected");
+                     }
+                    })
+                }
+                print("yes")
+                    .then((res)=>console.log(res))
+                    .catch((err)=>console.log(err))
+            </pre>
+        </div>
+
+        <h3>Question 5: Create examples to explain callback function.</h3>
+        <div>
+            <h3>Ans.</h3>
+            <pre>
+                function callback() {
+                    console.log("CallBack Function");
+                }
+                function myFun(callbackFunc) {
+                    callbackFunc();
+                }
+                myFun(callback);
+            </pre>
+        </div>
+
+        <h3>Question 6: Create examples to explain callback hell function.</h3>
+        
+        <div>
+            <h3>Ans.</h3>
+            <pre>
+                function higher(callback) {
+                    console.log("sample 1")
+                    callback()
+                }
+                function higher2(callback) {
+                    console.log("sample 2")
+                    callback()
+                }
+                function higher3(callback) {
+                    console.log("sample 3")
+                    callback()
+                }
+                function higher4() {
+                    console.log("sample 4")
+                }
+            
+                higher(function () {
+                    higher2(function () {
+                        higher3(function () {
+                            higher4();
+                        })
+                    })
+                })
+            </pre>
+        </div>
+
+        <h3>Question 7: Create examples to explain promises function.</h3>
+      
+        <div>
+            <h3>Ans.</h3>
+            <pre>
+                function print(a){
+                    return new Promise(function (resolve, reject){
+                     if(a===""yes""){
+                      resolve(""Promise is Resolved"");
+                     }
+                     else{
+                     reject(""Promise is Rejected"");
+                     }
+                    })
+                }
+                print(""yes"")
+                    .then((res)=>console.log(res))
+                    .catch((err)=>console.log(err))
+            </pre>
+        </div>
+
+
+        <h3>Question 8: Create examples to explain async await function.</h3>
+        
+        <div>
+            <h3>Ans.</h3>
+            <pre>
+                var demo = new Promise((res) => {
+                    setTimeout(() => {
+                        res("promise resolved")
+                    }, 2000)
+                })
+                async function sample() {
+                    let a = await demo;
+                    console.log(a);
+                    console.log("this is async method");
+                }
+            </pre>
+        </div>
+
+        <h3>Question 9: Create examples to explain promise.all function</h3>
+        <div>
+            <h3>Ans.</h3>
+            <pre>
+               
+            </pre>
+        </div>
+    </div>
+</body>
+
+</html>

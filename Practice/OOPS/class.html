@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+
+    class Bank{
+        name;
+        constructor(name){
+            this.name=name;
+        }
+        getBankName(){
+            console.log("SBI");
+        }
+    }
+    class Account extends Bank{
+        #balance;
+
+        constructor(n, b) {
+            super(n);
+            this.#balance = b;
+        }
+
+        withdraw(amount) {
+            if (this.#balance >= amount)
+                this.#balance = this.#balance - amount;
+            else
+                console.log("InSufficient Balance")
+
+        }
+
+        getBalance() {
+            console.log("Amount is: " + this.#balance)
+        }
+
+        deposite(amount) {
+            this.balance = this.balance + amount;
+        }
+    }
+
+    let acc = new Account("SBI",1000);
+    console.log(acc); // show object 
+    acc.deposite(500);// deposite the AMOUNT
+    acc.getBalance(); // see the amount
+    acc.balance = 100000;// modifying(updating) the amount (public)
+acc.getBankName();
+</script>

@@ -39,6 +39,7 @@
                 <p class="task_title">Trip to bhutan</p>
                 <hr class="hrline">
                 <div class="items">
+                </div>
                 <div class="icons">
                     <i class="fa fa-trash del_icon"></i>
                     <i class="fa-solid fa-plus plus_icon"></i>
@@ -48,18 +49,27 @@
     </div>
 
 
-    <div class="listForm" style="display: none;">
+    <div class="listForm popup" style="display: none;">
         <p class="popup_title">Add New List</p>
         <form action="">
-            <input type="text" id="listName" class="listName">
+            <input type="text" id="listName" class="listName inputName">
             <div class="buttons_inline">
-                <button class="addList" id="addList" type="button">Add</button>
-                <button class="close" id="close" type="button">Close</button>
+                <button class="addList button_Add" id="addList" type="button">Add</button>
+                <button class="close off" id="close" type="button">Close</button>
             </div>
         </form>
     </div>
 
-
+    <div class="itemForm popup" style="display: none;">
+        <p class="popup_title">Add New Item</p>
+        <form action="">
+            <input type="text" id="itemName" class="itemName inputName">
+            <div class="buttons_inline">
+                <button class="addTask button_Add" id="addTask" type="button">Add</button>
+                <button class="exit off" id="closeTask" type="button">Close</button>
+            </div>
+        </form>
+    </div>
 </body>
 
 </html>

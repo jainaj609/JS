@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    // let obj = {
+    //     "x": 10,
+    //     printX: function () {
+    //         console.log(this.x);
+    //     }
+    // }
+    // obj.printX();
+    // console.log(obj);
+    // console.log(obj.toString());
+
+
+    let date=new Date();
+
+
+let proto1=Object.getPrototypeOf(date);
+console.log(proto1);
+
+
+let proto2=Object.getPrototypeOf(proto1);
+console.log(proto2);
+
+
+let proto3=Object.getPrototypeOf(proto2);
+console.log(proto3);
+</script>

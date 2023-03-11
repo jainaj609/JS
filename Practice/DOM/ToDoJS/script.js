@@ -24,8 +24,9 @@ function createCard() {
     icon.className = "fa-solid fa-plus";
 
     let itembox = document.createElement("div");
+    itembox.className = "addItems"
 
-    icon.addEventListener("click", function(){
+    icon.addEventListener("click", function () {
         showtasks(itembox);
     })
 
@@ -33,7 +34,7 @@ function createCard() {
     del.className = "fa fa-trash";
 
     let list = document.createElement("div");
-    list.append(title,itembox, del, icon);
+    list.append(title, itembox, del, icon);
 
     del.addEventListener("click", function removeElement() {
         let tempArray = [];
@@ -52,27 +53,31 @@ function createCard() {
     function display(n) {
         let lists = document.getElementById("lists");
         lists.innerHTML = "";
-        for (let i=0; i<n.length; i++){
+        for (let i = 0; i < n.length; i++) {
             lists.appendChild(n[i]);
         }
     }
 
 }
-function showtasks(box){
+function showtasks(box) {
     document.getElementsByClassName("itemForm")[0].style.display = "block";
+    document.querySelector('#itemList').addEventListener("click", AddItems);
+    document.querySelector("#exit").addEventListener("click", ClosePOPup);
 
-    document.querySelector('#itemList').addEventListener("click", function(){
+    function AddItems() {
+        // let box = document.querySelector(".addItems");
         console.log("Add Button is pressed");
         let tag = document.createElement("li");
         tag.innerText = document.querySelector("#itemName").value;
-        box+=box.appendChild(tag);
+        box += box.appendChild(tag);
         document.getElementsByClassName("itemForm")[0].style.display = "none";
-        document.querySelector(".itemForm").removeEventListener("click",showtasks);
-    })
+        document.querySelector(".itemForm").removeEventListener("click", showtasks);
 
-    document.querySelector("#exit").addEventListener("click",function(){
+    }
+    function ClosePOPup() {
         console.log("Close Button is pressed");
         document.getElementsByClassName("itemForm")[0].style.display = "none";
-    })
 
+    }
 }
+

@@ -38,10 +38,30 @@ function createCard() {
     let plus_icon = document.createElement("i");
     plus_icon.className = "fa-solid fa-plus plus_icon";
 
-    plus_icon.addEventListener("click", function(){
-        showtasks(items)
-    }); 
-    
+    plus_icon.addEventListener("click", function showt() {
+        showtasks(items);
+    });
+
+    title.addEventListener("click", function () {
+
+        let header = document.getElementsByTagName("Header")[0];
+        header.firstElementChild.style.display = "none";
+
+        document.querySelector(".backbtnBox").style.display = "flex";
+        document.querySelector(".tasklist_text").innerHTML = this.innerText;
+        let listsss = document.querySelector("#lists");
+        listsss.setAttribute("style", "justify-content:center;");
+
+        let tempArray = [];
+        for (let i = 0; i < cards.length; i++) {
+            if (cards[i] === list)
+                tempArray.push(cards[i]);
+        }
+        display(tempArray);
+
+
+    });
+
     let del_icon = document.createElement("i");
     del_icon.className = "fa fa-trash del_icon";
 
@@ -66,24 +86,22 @@ function createCard() {
     cards.push(list);
     display(cards);
 
-
-    function display(n) {
-        let lists = document.getElementById("lists");
-        lists.innerHTML = "";
-        for (let i = 0; i < n.length; i++) {
-            lists.appendChild(n[i]);
-        }
+}
+function display(n) {
+    let lists = document.getElementById("lists");
+    lists.innerHTML = "";
+    for (let i = 0; i < n.length; i++) {
+        lists.appendChild(n[i]);
     }
-
 }
 function showtasks(box) {
 
     opacity.style.display = "block";
     let container_height = document.getElementById("container");
     opacity.style.height = `${container_height.offsetHeight + 100}px`;
-
     document.getElementsByClassName("itemForm")[0].style.display = "flex";
-    // document.querySelector(".popup_title").innerHTML = "Add New Item";
+
+
     document.getElementById("addTask").addEventListener('click', AddTasks);
 
     function AddTasks() {
@@ -101,14 +119,30 @@ function showtasks(box) {
         task_box.className = "taskBox";
         task_box.append(input, label);
 
-        box+=box.appendChild(task_box);
+        box += box.appendChild(task_box);
+
+        document.querySelector(".plus_icon").removeEventListener("click", showt);
 
     }
-    
+
     document.getElementById("closeTask").addEventListener('click', closeTasks);
 
     function closeTasks() {
-        document.getElementsByClassName("listForm")[1].style.display = "none";
+        document.getElementsByClassName("itemForm")[0].style.display = "none";
         opacity.style.display = "none";
+        // box -= box.appendChild(task_box);
+        document.querySelector(".plus_icon").removeEventListener("click", showt);
     }
 }
+document.querySelector(".backbtnBox").addEventListener("click", function () {
+    console.log("Back button is pressed");
+    let header = document.getElementsByTagName("Header")[0];
+    header.firstElementChild.style.display = "flex";
+
+    document.querySelector(".backbtnBox").style.display = "none";
+    document.querySelector(".tasklist_text").innerHTML = `Task <span class="list">List`;
+    let listsss = document.querySelector("#lists");
+    listsss.setAttribute("style", "justify-content:space-between;");
+
+    display(cards);
+})

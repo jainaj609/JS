@@ -13,12 +13,12 @@
  // if it is declared outside a function then it is global scope.
  // you can assign and redeclare the value multiple times.
 
- //let - let is the new way to declare varaible.It is block scope which means it is accesable 
+ //let - let is the new way to declare varaible.It is block scope which means it is accessible 
  // only on that particular block.
  // if it is declared outside a function then it is global scope.
 // you can assign the value multiple times. but can not redeclare it 
 
-//const - const is the new way to declare varaible.It is block scope which means it is accesable 
+//const - const is the new way to declare varaible.It is block scope which means it is accessible 
  // only on that particular block.
  // if it is declared outside a function then it is global scope.
  //in const you have to declare and intilize the value at the same time.

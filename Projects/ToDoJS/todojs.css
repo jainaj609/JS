@@ -61,6 +61,7 @@ header {
     border: 7px solid blueviolet;
     border-radius: 50%;
 }
+
 /* div.container :not(#unblurred){
     filter: blur(2px);    
 
@@ -161,7 +162,8 @@ header {
     flex-direction: column;
 
 }
-.items{
+
+.items {
     margin-top: -10px;
     display: flex;
     flex-direction: column;
@@ -220,45 +222,75 @@ header {
     border: 11px solid rgba(255, 0, 0, 0.432);
 }
 
-div.taskBox{
-    display:flex;
+div.taskBox {
+    display: flex;
     flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
     gap: 5px;
     margin-top: 15px;
-  }
-  
-  input[type="checkbox"]:before {
-    content:"Mark Done";
+}
+
+input[type="checkbox"]:before {
+    content: "Mark Done";
     background-color: rgb(150, 103, 193);
-  }
-  
-  input[type="checkbox"]{
+}
+
+input[type="checkbox"] {
     appearance: none;
     padding-top: 2px;
-    text-align:center;
+    text-align: center;
     font-size: x-small;
     color: #fff;
     height: 1.75em;
-    width:  6.15em;
+    width: 6.15em;
     background-color: rgb(150, 103, 193);
     border: 1px solid rgb(150, 103, 193);
     border-radius: 10px;
-  }
-  
-  input[type="checkbox"]:checked{
+}
+
+input[type="checkbox"]:checked {
     display: none;
-  }
-  label{
+}
+
+label {
     font-family: sans-serif;
     font-weight: 200;
     font-size: large;
     color: black;
-  }
-  input[type="checkbox"]:checked+label{
-    text-decoration:line-through;
+}
+
+input[type="checkbox"]:checked+label {
+    text-decoration: line-through;
     font-size: medium;
     text-decoration-thickness: 2px;
     color: rgb(198, 10, 10);
-  }
+}
+
+.backbtnBox {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 10px;
+    font-size: xx-large;
+    font-weight: 100;
+    font-family: 'Albert Sans', sans-serif;
+
+}
+
+.back {
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back_icon {
+    height: 25px;
+    width: 25px;
+    clip-path: polygon(63% 0, 37% 48%, 62% 100%, 49% 100%, 25% 49%, 50% 0);
+    background-color: black;
+}

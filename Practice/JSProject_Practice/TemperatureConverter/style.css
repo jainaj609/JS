@@ -1,0 +1,40 @@
+body {
+    text-align: center;
+
+}
+
+.parent {
+    margin: auto;
+    padding: 50px 100px;
+
+}
+
+.container {
+    width: 70vw;
+    height: 30vh;
+    background-color: rgba(0, 128, 0, 0.615);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    gap: 30px;
+}
+
+.celsiusBox,
+.fehrenheitBox {
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+}
+
+label {
+    font-size: larger;
+}
+
+input {
+    padding: 5px 10px;
+    width: 250px;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+}

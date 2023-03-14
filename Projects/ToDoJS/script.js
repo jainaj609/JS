@@ -1,26 +1,31 @@
 document.getElementById("createList").addEventListener('click', createList);
 document.getElementById("close").addEventListener('click', removeListForm);
 document.getElementById("addList").addEventListener('click', createCard);
+
 let cards = [];
 let opacity = document.querySelector(".opacity");
 
+// "Add Card" Popup Appearing 
 function createList() {
     console.log("List created");
     document.querySelector(".info_to_empty_text").innerHTML = "";
     opacity.style.display = "block";
     let container_height = document.getElementById("container");
     opacity.style.height = `${container_height.offsetHeight + 100}px`;
-
     document.getElementsByClassName("listForm")[0].style.display = "flex";
 }
 
+// Close Popup "Add Card"
 function removeListForm() {
     console.log("List closed");
     document.getElementsByClassName("listForm")[0].style.display = "none";
     opacity.style.display = "none";
 }
 
+
+// Card Creation
 function createCard() {
+
     console.log("Create card");
     document.getElementsByClassName("listForm")[0].style.display = "none";
     opacity.style.display = "none";
@@ -42,6 +47,7 @@ function createCard() {
         showtasks(items);
     });
 
+    // Showing Card Individually  
     title.addEventListener("click", function () {
 
         let header = document.getElementsByTagName("Header")[0];
@@ -58,8 +64,6 @@ function createCard() {
                 tempArray.push(cards[i]);
         }
         display(tempArray);
-
-
     });
 
     let del_icon = document.createElement("i");
@@ -73,6 +77,9 @@ function createCard() {
     list.className = "child";
     list.append(title, hr, items, icons);
 
+
+
+    // Deletion of card
     del_icon.addEventListener("click", function removeElement() {
         let tempArray = [];
         for (let i = 0; i < cards.length; i++) {
@@ -87,6 +94,8 @@ function createCard() {
     display(cards);
 
 }
+
+// Displaying function of all the cards
 function display(n) {
     let lists = document.getElementById("lists");
     lists.innerHTML = "";
@@ -94,16 +103,17 @@ function display(n) {
         lists.appendChild(n[i]);
     }
 }
+
+// Add Sub Tasks functionality in the Card
 function showtasks(box) {
 
     opacity.style.display = "block";
     let container_height = document.getElementById("container");
     opacity.style.height = `${container_height.offsetHeight + 100}px`;
     document.getElementsByClassName("itemForm")[0].style.display = "flex";
-
-
     document.getElementById("addTask").addEventListener('click', AddTasks);
 
+    //Add tasks
     function AddTasks() {
         document.getElementsByClassName("itemForm")[0].style.display = "none";
         opacity.style.display = "none";
@@ -119,22 +129,26 @@ function showtasks(box) {
         task_box.className = "taskBox";
         task_box.append(input, label);
 
-        box += box.appendChild(task_box);
-
-        document.querySelector(".plus_icon").removeEventListener("click", showt);
+        box.appendChild(task_box);
+        document.getElementById("addTask").removeEventListener('click', AddTasks);
 
     }
 
     document.getElementById("closeTask").addEventListener('click', closeTasks);
-
+    // Close popup of "Sub task"
     function closeTasks() {
+
+        console.log("close Button last")
         document.getElementsByClassName("itemForm")[0].style.display = "none";
         opacity.style.display = "none";
-        // box -= box.appendChild(task_box);
-        document.querySelector(".plus_icon").removeEventListener("click", showt);
+        document.getElementById("addTask").removeEventListener('click', AddTasks);
+
     }
 }
+
+//Back Button Functionality
 document.querySelector(".backbtnBox").addEventListener("click", function () {
+
     console.log("Back button is pressed");
     let header = document.getElementsByTagName("Header")[0];
     header.firstElementChild.style.display = "flex";
@@ -143,6 +157,6 @@ document.querySelector(".backbtnBox").addEventListener("click", function () {
     document.querySelector(".tasklist_text").innerHTML = `Task <span class="list">List`;
     let listsss = document.querySelector("#lists");
     listsss.setAttribute("style", "justify-content:space-between;");
-
     display(cards);
+
 })
